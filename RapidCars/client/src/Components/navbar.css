@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: Verdana, Helvetica, sans-serif;
+    
+  }
+
+  .topnav {
+    position:fixed;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+    background-color: #0f73ee;
+    
+  }
+
+  .topnav span{
+    float: right;
+   
+  }
+  .topnav span i{
+    margin-right: 5px;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+
+  }
+
+ .card-body .form-group submit{
+
+  background-color:#0f73ee ;
+ 
+  color: #fff;
+ 
+ 
+ }
+
+  .logo {
+    margin-top: 3px;
+    margin-bottom: auto;
+    margin-left: 2vw;
+    float: left;
+    width: 11vw;
+    height: 4vw;
+    margin-bottom: 3px;
+  }
+
+  /* .home_images_container {
+    width: fit-content;
+
+  } */
+
+  /* .home_bg_images {
+    background-image: url("kelly-sikkema-XXherw1ujoI-unsplash.jpg");
+    width: 100vw;
+    height: 50vw;
+    color: rgb(146, 145, 145);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  } */
+
+  .topnav link.active {
+    border-radius: 3px;
+    background: #fff;
+    color: #0f73eee7;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+
+  /* .container_images {
+    margin-top: 20px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+   
+  } */
+
+  /* * {
+    box-sizing: border-box;
+  } */
+
+   /* .container_images .row {
+    display: flex;
+  }
+
+  .container_images .row img{
+    width: 80%;
+  }
+
+  
+
+  /* Create three equal columns that sits next to each other */
+  /* .container_images .column {
+    display: flex;
+    float: left;
+    flex: 50%;
+    padding: 18px;
+  } */
+ 
+
+  .center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+} 
+/*
+  .container_images img {
+   
+    width: 36vw;
+height: auto;
+margin-left: 1.2vw;
+margin-right: 1.2vw;
+margin-top: 1.2vw;
+margin-bottom: 1.2vw;
+border-radius: 1%;
+
+  }
+
+ */
+
+
+
+  @media screen and (max-width: 600px) {
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 600px) {
+
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    .topnav.responsive {
+      
+    width: 100%;
+    overflow: hidden;
+    padding-right: 0px;
+    background-color: #0f73ee;
+    position: relative;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+    }
+
+    .logo {
+     
+      margin-left: 4vw;
+      float: left;
+      width: 24vw;
+      height: 10vw
+    }
+
+    /* .container_images .column {
+      flex: 100%;
+      padding: 18px;
+    }
+
+    .container_images img {
+      width: 300px;
+    height: auto;
+   
+      }
+      */
+  }

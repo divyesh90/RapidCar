@@ -1,0 +1,159 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url("https://fonts.googleapis.com/css?family=Numans");
+
+html,
+body {
+  /* background-image: url("./../../public/img/loginbg.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+  width: 100vw;
+  font-family: "Numans", sans-serif;
+} 
+
+
+
+
+.container {
+
+  height: 100%; 
+  width: fit-content;
+  align-content: center;
+}
+
+.card {
+  height: fit-content;
+  margin-top: 40px;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.social_icon span {
+  font-size: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #0f73ee;
+}
+
+.social_icon span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card-header h3 {
+    margin-right: 180px;
+  color: white;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+
+.card Link{
+  font-size: 20px;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #0f73ee;
+  color: rgb(255, 255, 255);
+  border: 0 !important;
+}
+
+.validation {
+color: rgb(247, 243, 243);
+
+font-size: 14px;
+}
+
+span{
+  display: block;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  color: black;
+  background-color: #0f73ee;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.links {
+  color: white;
+  font-size: 20px;
+}
+
+.links a  {
+  margin-left: 7px;
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+
+
+
+
+
+
+
+ @media only screen and (max-width: 455px) {
+  
+  html,body {
+  /* background-image: url("../../public/img/loginbg_m.jpg");  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  font-family: "Numans", sans-serif;
+}
+
+    .container {
+     height: auto;
+    width: auto;
+    align-content: center !important;
+    }
+  
+
+
+  .card {
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.445) !important;
+  }
+} 
+
+/* @media screen and (min-width: 1366px) {
+    color: red;
+} */
+
+/* @media only screen and (max-width: 200000px) {
+    input {
+        border-radius: 50px;
+        background-color: black;
+    }
+} */

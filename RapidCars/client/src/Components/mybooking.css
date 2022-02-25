@@ -1,0 +1,171 @@
+#mybooking_main{
+    margin-top: 53PX;
+     height: 100%;
+     background-color: rgb(240, 239, 239);
+     width: 100%;
+     display: block;
+     
+    float: right;
+ }
+
+
+ .mybooking_containar{
+
+   
+    height :100%;
+    
+    background-color: rgb(223, 221, 221);;
+}
+
+.mybooking_containar .mybooking_block{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    height: auto;
+    background-color: white;
+    padding: 22px 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 1px 1px #e0e0e0;
+    font-size: 12px;
+ 
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars{
+    border-radius: 4px;
+    border: 1px solid #0f73ee;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 320px;
+    
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars img {
+    width: 274px;
+    height: 154px;
+    margin-right: auto;
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details {
+   
+    
+    margin-left: auto;
+    margin-right: 10%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: right;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details h2{
+
+    color: #1f1f1f;
+    padding: 0;
+    margin: 8px 0 2px;
+    font-weight: 520;
+    font-size: 15px;
+   
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details span{
+
+    color: #0f73ee;
+    display: inline;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.mybooking_containar .mybooking_block .booking_car .cars .car_details h3{
+    font-weight: 300;
+    font-size: 12px;
+    color: #a8a8a8;
+    margin:0px;
+    padding: 0;
+    display: inline;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details button{
+    margin-top: 10px; 
+    border-radius: 1px;
+    border: none;
+    color: #1f1f1f;
+    border: 1px solid #0f73ee;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+   
+
+#total_bill{
+
+    margin-top: 10px; 
+    border-radius: 1px;
+    border: none;
+    color: #1f1f1f;
+    border: 1px solid #0f73ee;
+    padding: 8px 40%;
+    font-size: 18px;
+    font-weight: 540;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: #0f73ee;
+    font-family: Arial, sans-serif;
+
+   
+}
+
+
+@media only screen and (max-width: 455px) {
+
+    .mybooking_containar .mybooking_block .booking_car .cars{
+        border-radius: 4px;
+        border: 1px solid #0f73ee;
+        padding: 10px;
+        margin-bottom: 10px;
+        height: 500px;
+        
+    }
+
+    #total_bill{
+
+        margin-top: 10px; 
+        border-radius: 1px;
+        border: none;
+        color: #1f1f1f;
+        border: 1px solid #0f73ee;
+        padding: 8px 10px;
+        font-size: 18px;
+        font-weight: 540;
+        text-transform: uppercase;
+        border-radius: 4px;
+        color: #0f73ee;
+        font-family: Arial, sans-serif;
+    
+       
+    }
+
+    
+
+    .mybooking_containar .mybooking_block{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width:85%;
+        height: auto;
+        background-color: white;
+        padding: 22px 20px;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0px 0px 1px 1px #e0e0e0;
+        font-size: 12px;
+     
+    }
+    
+    
+  } 
+  

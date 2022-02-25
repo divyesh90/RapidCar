@@ -1,0 +1,342 @@
+/* #mybooking_main{
+    margin-top: 53PX;
+     height: 100%;
+     background-color: rgb(240, 239, 239);
+     width: 100%;
+     display: block;
+     
+    float: right;
+ }
+
+
+ .mybooking_containar{
+
+   
+    height :100%;
+    margin-top: 100px;
+    background-color: rgb(223, 221, 221);;
+}
+
+.mybooking_containar .mybooking_block{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    height: auto;
+    background-color: white;
+    padding: 22px 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 1px 1px #e0e0e0;
+    font-size: 12px;
+ 
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars{
+    border-radius: 4px;
+    border: 1px solid #0f73ee;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 320px;
+    
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars img {
+    width: 274px;
+    height: 154px;
+    margin-right: auto;
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details {
+   
+    
+    margin-left: auto;
+    margin-right: 10%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: right;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details h2{
+
+    color: #1f1f1f;
+    padding: 0;
+    margin: 8px 0 2px;
+    font-weight: 520;
+    font-size: 15px;
+   
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details span{
+
+    color: #0f73ee;
+    display: inline;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.mybooking_containar .mybooking_block .booking_car .cars .car_details h3{
+    font-weight: 300;
+    font-size: 12px;
+    color: #a8a8a8;
+    margin:0px;
+    padding: 0;
+    display: inline;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details button{
+    margin-top: 10px; 
+    border-radius: 1px;
+    border: none;
+    color: #1f1f1f;
+    border: 1px solid #0f73ee;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.mybooking_containar .mybooking_block .booking_car .cars .car_details button :hover{
+   
+   
+    background-color: #0f73ee;
+    
+} */
+    
+
+
+
+
+
+/* body {
+    color: #566787;
+    background: #f5f5f5;
+    font-family: 'Varela Round', sans-serif;
+    
+    font-size: 13px;
+} */
+
+
+.p_main{
+    /* margin-top: 100px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 53PX;
+    height: 100%;
+    background-color: rgb(240, 239, 239);
+    width: 100%;
+    display: block;
+    
+   float: right;
+}
+
+#myID{
+    visibility: hidden;
+}
+
+.table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+    
+    width: 120%;
+    background: #fff;
+    height: 1100px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    padding-bottom: 15px;
+    background: #299be4;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+}
+.table-title .column{
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.table-title .column .list_button{
+   width:260px;
+    color: blue;
+    display: inline-block; 
+    background: #f5f5f5;
+    padding: 4px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+
+
+  }
+
+  .table-title .column .button{
+   
+    
+    display: inline-block; 
+   
+
+  }
+
+  .table-title .column button{
+   
+    color: #299be4;
+    display: inline-block; 
+    background: #f5f5f5;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+  
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+
+
+  }
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+.table-title .btn {
+    color: #566787;
+    float: right;
+    font-size: 13px;
+    background: #fff;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+}
+.table-title .btn:hover, .table-title .btn:focus {
+    color: #566787;
+    background: #f2f2f2;
+}
+.table-title .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+.table-title .btn span {
+    float: left;
+    margin-top: 2px;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 5px;
+    vertical-align: middle;
+}
+table.table tr th:first-child {
+    width: 60px;
+}
+table.table tr th:last-child {
+    width: 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f8fc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}	
+table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px;
+}
+table.table td a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+}
+table.table td a:hover {
+    color: #2196F3;
+}
+table.table td a.settings {
+    color: #2196F3;
+}
+table.table td a.delete {
+    color: #F44336;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table .avatar {
+    
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 50px;
+    width: 75px;
+}
+.status {
+    font-size: 30px;
+    margin: 2px 2px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 10px;
+}
+.text-success {
+    color: #10c469;
+}
+.text-info {
+    color: #62c9e8;
+}
+.text-warning {
+    color: #FFC107;
+}
+.text-danger {
+    color: #ff5b5b;
+}
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+.pagination li a {
+    border: none;
+    font-size: 13px;
+    min-width: 30px;
+    min-height: 30px;
+    color: #999;
+    margin: 0 2px;
+    line-height: 30px;
+    border-radius: 2px !important;
+    text-align: center;
+    padding: 0 6px;
+}
+.pagination li a:hover {
+    color: #666;
+}	
+.pagination li.active a, .pagination li.active a.page-link {
+    background: #03A9F4;
+}
+.pagination li.active a:hover {        
+    background: #0397d6;
+}
+.pagination li.disabled i {
+    color: #ccc;
+}
+.pagination li i {
+    font-size: 16px;
+    padding-top: 6px
+}
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 13px;
+}
