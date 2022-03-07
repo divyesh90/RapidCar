@@ -144,7 +144,7 @@
     padding: 4px;
     justify-content: space-around;
     margin-bottom: 10px ;
-   
+    text-transform: uppercase;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 4px;
@@ -231,7 +231,7 @@
     padding: 4px;
     justify-content: space-around;
     margin-bottom: 10px ;
-   
+    text-transform: uppercase;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 4px;
@@ -303,6 +303,16 @@
     margin: 8px 0 2px;
     font-weight: 520;
     font-size: 15px;
+   
+}
+
+.booking_containar .booking_block .car_data .cars .car_details .carnotfound h2{
+
+    color: #0f73ee;
+    padding-top: 60px;
+    margin: 8px 0 2px;
+    font-weight: 520;
+    font-size: 18px;
    
 }
 
@@ -467,6 +477,7 @@
         border-radius: 4px;
         border: 1px solid #e0e0e0;
         width: 80%;
+        text-transform: uppercase;
     }
 
     /* #billamount {
@@ -482,5 +493,30 @@
         margin-right: 4px;
         border-radius: 10px;
     } */
+
+
+    .booking_containar .booking_block{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width:85%;
+        height: auto;
+        background-color: white;
+        padding: 22px 20px;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0px 0px 1px 1px #e0e0e0;
+        font-size: 12px;
+     
+    }
+
+    .booking_containar .booking_block .car_data .cars img {
+        width: 254px;
+        height: 144px;
+        margin-right: auto;
+        float: left;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
     
 }

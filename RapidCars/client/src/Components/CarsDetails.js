@@ -211,30 +211,7 @@ const  booking_car_sort = (isbook) =>{
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            {/* <div id='mybooking_main'>
-                <div className='mybooking_containar'>
-                    <div className='mybooking_block'>
-                        <div className='booking_car'>
-                            <div className='cars' >
-                                <img src='./img/download.jpg'></img>
-                                <div className='car_details'>
-
-                                    <span> <i class="fas fa-map-marker-alt"> </i> <h3>5 seater seadan</h3> </span>
-                                    <h2>maruti suzuki baleno</h2>
-                                    <h3>5 seater seadan</h3>
-                                    <br></br>
-                                    <br></br>
-                                    <span> <i class="fas fa-star"></i>  <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span><br></br>
-                                    <h2><span><i class="fas fa-rupee-sign"></i></span>500</h2>
-                                    <button>  Book Now </button>
-                                </div>
-                            </div>
-                            {rendercar()}
-                        </div>
-                    </div>
-                </div>
-
-            </div> */}
+            
 
 
             <div className="p_main">
@@ -265,7 +242,7 @@ const  booking_car_sort = (isbook) =>{
                             </div>
                             <table className="table table-striped table-hover">
                                 <thead>
-                                    <tr>
+                                    <tr >
                                         <th>No</th>
                                         <th>Car</th>
                                         <th>Company</th>

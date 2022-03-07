@@ -143,7 +143,7 @@ export default function Login( {setloginuser } ) {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" className="form-control" placeholder="Email" required name="email" required value={user.email} onChange={handleChange} />
+                                        <input type="text" className="form-control" placeholder="Email" required name="email"  value={user.email} onChange={handleChange} />
 
                                     </div>
 
@@ -170,7 +170,7 @@ export default function Login( {setloginuser } ) {
                                     Don't have an account?<Link to = '/signup'>Signup</Link>
                                 </div>
                                 <div className="d-flex justify-content-center">
-                                    <a href="#">Forgot your password?</a>
+                                <a href="/forgetpassword">Forgot your password?</a>
                                 </div>
                             </div>
                         </div>

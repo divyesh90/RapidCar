@@ -1,0 +1,157 @@
+
+
+
+.home_bg_images img{
+  
+    /* background-image: url("./../../public/img/kelly-sikkema-XXherw1ujoI-unsplash.jpg");  */
+    width: 100%;
+    height: auto;
+    color: rgb(146, 145, 145);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .home_main{
+
+      padding-top: 53px;
+      display: block;
+     
+    
+  }
+
+
+  .container_images {
+    margin-top: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+   
+  }
+
+
+  .center {
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+} 
+
+
+  .container_images img {
+   
+    width: 36vw;
+    height: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 1.2vw;
+    margin-bottom: 1.2vw;
+    border-radius: 1%;
+    transition: transform 3s; /* Animation */
+    /* position: absolute; */
+
+  }
+
+  .container_images img:hover{
+   
+    transform: scale(1.2); 
+    /* position: absolute; */
+
+  }
+  .howitwork  h2 {
+    font-family: 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    word-spacing:2px;
+    font-size: 20px;
+    margin: 18px 0;
+    text-align: center;
+   
+   
+    font-weight: 400;
+}
+.howitwork  p{
+    font-family: 'Open Sans',sans-serif;
+    margin: 0;
+    font-size: 18px;
+    word-spacing:3px;
+    text-align: center;
+    
+}
+  .howitwork .fold-wrap {
+    width: auto;
+    display: flex !important;
+    padding: 50px 0;
+    justify-content: center;
+}
+.howitwork .fold-wrap div {
+    width: 220px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);
+    margin: 0 10px;
+}
+
+.howitwork .fold-wrap h4 {
+    font-family: 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 18px 0;
+    text-align: center;
+   
+    font-weight: 400;
+}
+.howitwork .fold-wrap>div img {
+    margin-top: 20px;
+    width: 120px;
+    height:50px;
+    align-items: center;
+    margin-left: 25%;
+}
+.fold-wrap p{
+    font-family: 'Open Sans',sans-serif;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+.car_catalogue_section {
+    height: 597px;
+    padding: 10px 0;
+    color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 -50.2em !important;
+}
+
+
+
+
+
+  @media screen and (max-width: 600px) {
+
+    .container_images img {
+   
+        width: 300px;
+        height: auto;
+        
+        border-radius: 1%;
+        position: relative
+    
+      }
+
+      .container_images {
+        margin-top: 20px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .howitwork .fold-wrap {
+        flex-wrap: wrap;
+    }
+
+    .howitwork .fold-wrap>div {
+        margin: 15px 10px;
+    }
+
+
+  }

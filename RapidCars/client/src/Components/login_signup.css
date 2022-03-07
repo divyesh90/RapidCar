@@ -7,7 +7,7 @@ body {
   /* background-image: url("./../../public/img/loginbg.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
- 
+ background-color: #f9f9f9;
   width: 100vw;
   font-family: "Numans", sans-serif;
 } 
@@ -112,6 +112,14 @@ input:focus {
   font-weight: 400;
   
 }
+#resetpass{
+  display: none;
+}
+
+#otp_block{
+  margin-top: 50px;
+  display: none;
+}
 
 
 
@@ -140,7 +148,7 @@ input:focus {
 
   .card {
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 50%;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.445) !important;

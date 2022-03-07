@@ -19,6 +19,8 @@ import CarsDetails from './Components/CarsDetails';
 import ExportPdfComponent from './Components/ExportPdfComponent';
 import BookingCars from './Components/BookingCars';
 import AdminNavbar from './Components/AdminNavbar';
+import Home from "./Components/Home";
+import Forgetpas from './Components/Forgetpas';
 
 
 
@@ -69,7 +71,7 @@ function App() {
           <Route exact path='/'>
             <>
               <Navbar setloginuser={setloginuser} uname={uname} login={login} />
-              {/*  */}
+              <Home/>
             </>
 
 
@@ -140,6 +142,13 @@ function App() {
         <Route path='/login'>
           <>
             <Login setloginuser={setloginuser} />
+          </>
+
+        </Route>
+
+        <Route path='/forgetpassword'>
+          <>
+            <Forgetpas />
           </>
 
         </Route>

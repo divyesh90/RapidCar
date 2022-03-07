@@ -150,7 +150,7 @@ export default function Signup() {
                                     <div className="input-group-prepend">
                                         <span className="input-group-text"><i className="fas fa-user"></i></span>
                                     </div>
-                                   <input type="text" className="form-control" placeholder="Username" name="uname" required value={user.uname} onChange={handleChange}/> 
+                                   <input type="text" className="form-control" placeholder="Username" name="uname" value={user.uname} onChange={handleChange}/> 
                                     
                                 </div>
                                 <div className='validation' id="validate_email"></div>
@@ -159,7 +159,7 @@ export default function Signup() {
                                         <span className="input-group-text"><i className="fas fa-envelope"></i></span>
                                     </div>
                         
-                                    <input type="email" className="form-control" placeholder="Email" required name="email"  required 
+                                    <input type="email" className="form-control" placeholder="Email" required name="email"  
                                       value={user.email} onChange={handleChange} />
 
                                 </div>
@@ -201,7 +201,7 @@ export default function Signup() {
                                 Do have an account?<Link to='/login'> Login </Link>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <a href="#">Forgot your password?</a>
+                                <a href="/forgetpassword">Forgot your password?</a>
                             </div>
                         </div>
                     </div>

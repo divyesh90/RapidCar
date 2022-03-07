@@ -62,14 +62,18 @@ export default function Booking(props) {
             [name]: value,
         });
         console.log(book);
+        sort_data();
     };
 
 
     function validate_input(car) {
         var IsValid = true;
 
+         console.log(book.todate);
+
 
         if (book.todate == "") {
+            console.log(book.todate);
             document.getElementById("date_error").innerHTML =
                 " both date must be require ";
             IsValid = false;
@@ -196,7 +200,23 @@ export default function Booking(props) {
 
     const sort_data = () => {
 
+
+
+
+
         var newArray = car;
+
+        var fromlocation =  document.getElementById("fromlocation_value").value;
+
+        // newArray = newArray.sort((a, b) => (a.location.toUpperCase().includes( String(fromlocation).toUpperCase())  ? -1 : 1))
+
+
+        newArray = car.filter( (val) => {
+            return val.location.toUpperCase().includes( String(fromlocation).toUpperCase())
+        })
+
+        console.log(fromlocation)
+        
         var cartype = document.getElementById("select_cartype").value;
         console.log(cartype);
 
@@ -251,6 +271,7 @@ export default function Booking(props) {
     }
 
     const onChange = event => {
+
 
         sort_data();
     };
@@ -311,7 +332,29 @@ export default function Booking(props) {
     const rendercar = () => {
         var num = 0;
 
+        if(cardata.length == 0){
 
+            return(<div className='cars' >
+                       
+                        <div className='car_details'>
+
+                            <div className='carnotfound'>
+
+                            <h2> Sorry ! For this location car is not avalaible select nearest other location</h2>
+                                </div>
+                
+                                
+                        </div>
+                    </div>)
+                
+
+
+        }
+
+        else{
+          
+
+     
 
         return cardata.map(car => {
 
@@ -342,6 +385,7 @@ export default function Booking(props) {
                             <button name="carid" value={car._id}
 
                                 onClick={() => {
+
 
                                     const confirmBox = window.confirm(
                                         "Do you really want to Booking this Car!" + car.cprice
@@ -383,6 +427,8 @@ export default function Booking(props) {
                 //     </> }
             )
         })
+
+    }
     }
 
 
@@ -448,14 +494,14 @@ export default function Booking(props) {
                                 <h4>Select Your Location</h4>
                                 <h5 id="location_error"></h5>
                                 <span> <i class="fas fa-map-marker-alt"></i></span>
-                                <input type="text" placeholder='From' required name="fromlocation"
-                                    value={book.fromlocation} onChange={handleChange}
+                                <input id="fromlocation_value" type="text" placeholder='From' required name="fromlocation"
+                                    value={book.fromlocation.toUpperCase()} onChange={handleChange}
                                 ></input>
 
                                 <a>To</a>
                                 <span> <i class="fas fa-map-marker-alt"></i></span>
                                 <input type="text" placeholder='To' required name="tolocation"
-                                    value={book.tolocation} onChange={handleChange}
+                                    value={book.tolocation.toUpperCase()} onChange={handleChange}
                                 ></input>
                             </div>
                         </div>
