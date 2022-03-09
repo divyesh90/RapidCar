@@ -47,11 +47,15 @@ const history = useHistory()
         <img src="./rapido-final-logo.png" class="logo" />
         <a> </a>
         <a> </a>
+        {/* <a className='active' href="/">Home</a>
+        <a href="/booking">Booking</a>
+        <a href="#home">Home</a>
+        <a  href="#home">Home</a> */}
         <Link to="/">Home</Link>
-        <Link to="/booking">Booking</Link>
-        <Link to="/mybooking">My Booking</Link>
-        <Link to="/cardetails">Car Details</Link>
-        <Link id='logout' onClick={() => redirect()} >{props.login}</Link>
+        <Link  to="/booking">Booking</Link>
+        <Link  to="/mybooking">My Booking</Link>
+       
+        <Link  id='logout' onClick={() => redirect()} >{props.login}</Link>
         
         <span><a class="icon" onClick={() => myFunction()}>
           < i class="fa fa-bars" id='remove-button'></i>
