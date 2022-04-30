@@ -16,15 +16,13 @@ export default function Login( {setloginuser } ) {
 
     function login() {
 
-       
-
         if (validate_input(user) == true) {
 
             console.log("in posrt")
 
             axios.post("http://localhost:8000/api/signin", user)
                 .then(res => {
-                    console.log("valid input  1233")
+                    
                     console.log(res.data.message.email);
                     setloginuser(res.data.message);
                     window.localStorage.setItem("user_login", "yes")
@@ -32,7 +30,6 @@ export default function Login( {setloginuser } ) {
                     
                     if (res.data.message.email === "rapidcars123@gmail.com"){
 
-                        console.log("Fdsfsdfd")
                         history.push({
                             pathname :'/cardetails',
                         });
@@ -41,9 +38,7 @@ export default function Login( {setloginuser } ) {
 
                         console.log("ddfsd")
 
-                        history.push({
-                            pathname :'/',
-                        });
+                        history.push('/')
 
                     }
                    
@@ -81,7 +76,7 @@ export default function Login( {setloginuser } ) {
         }
 
         if ( user.password.length < 6 || user.password == '') {
-            document.getElementById('validate_password').innerHTML = "Password must be at list 6 latter"
+            document.getElementById('validate_password').innerHTML = "Password must be atleast 6 latter"
             IsValid = false
         }
         else {
@@ -161,7 +156,7 @@ export default function Login( {setloginuser } ) {
                                         <input type="checkbox" />Remember Me
                                     </div>
                                     <div className="form-group">
-                                        <input value="Submit"  onClick= {()=> login()} className="btn float-right login_btn" ></input>
+                                        <input value="Login" onClick= { ()=>login()} className="btn float-right login_btn" ></input>
                                     </div>
                                 </form>
                             </div>

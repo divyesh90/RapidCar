@@ -49,7 +49,7 @@ const history = useHistory()
         <a> </a>
         <Link to="/register">Register car</Link>
         <Link to="/cardetails">Cars</Link>
-        <Link to="/bookingcars">Book car</Link>
+        <Link to="/bookingcars">Booked car</Link>
         <Link id='logout' onClick={() => redirect()} >{props.login}</Link>
         
         <span><a class="icon" onClick={() => myFunction()}>

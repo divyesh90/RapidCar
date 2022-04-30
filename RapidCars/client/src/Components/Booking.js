@@ -219,8 +219,9 @@ export default function Booking(props) {
         
         var cartype = document.getElementById("select_cartype").value;
         console.log(cartype);
-
         var carseats = document.getElementById("select_carseats").value;
+        var cargear = document.getElementById("select_geartype").value;
+        var carfuel = document.getElementById("select_carfuel").value;
         var carcompany = document.getElementById("select_carcompany").value;
         var carprice = document.getElementById("select_price").value;
         console.log(carprice)
@@ -247,6 +248,27 @@ export default function Booking(props) {
 
             newArray = newArray.filter(function (el) {
                 return el.company == carcompany;
+            });
+
+            console.log(newArray);
+
+
+        }
+        if (carfuel != "ALL") {
+
+            newArray = newArray.filter(function (el) {
+                return el.fuel.toUpperCase() == carfuel;
+            });
+
+            console.log(newArray);
+
+
+        }
+
+        if (cargear != "ALL") {
+
+            newArray = newArray.filter(function (el) {
+                return el.gear_type.toUpperCase() == cargear;
             });
 
             console.log(newArray);
@@ -374,13 +396,16 @@ export default function Booking(props) {
 
                             <span> <i class="fas fa-map-marker-alt"> </i> <h3>{car.location}</h3> </span>
                             <h2>{car.company} {car.cname}</h2>
-                            <h3>{car.seat} {car.cartype}</h3>
+                            <h3>Fuel: {car.fuel}</h3>
+                            <br></br>
+                            <h3>Gear: {car.gear_type}  </h3>
+                            <br></br>
+                            <h3>Mileage: {car.mileage} Km/L</h3>
+                            <br></br>
+                            <h3>Seats: {car.seat} {car.cartype}</h3>
                             <br></br>
                             <h3>{car.carno} </h3>
                             <br></br>
-
-                            <br></br>
-                            <span> <i class="fas fa-star"></i>  <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span><br></br>
                             <h2><span><i class="fas fa-rupee-sign"></i></span>{car.cprice} /Hours</h2>
                             <button name="carid" value={car._id}
 
@@ -540,6 +565,26 @@ export default function Booking(props) {
                     <div className='side_block' id="side_block">
 
                         <div className='block'>
+                        <span><i>Company</i></span>
+                            <select
+                                id="select_carcompany"
+                                onChange={onChange}
+                            >
+                                <option value="ALL" selected>ALL</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Suzuki">Suzuki</option>
+                                <option value="Mahindra">Mahindra</option>
+                            </select>
+                            <span><i>Price:</i></span>
+
+                            <select
+                                id="select_price"
+                                onChange={onChange}
+                            >
+                                <option value="ALL" selected>ALL</option>
+                                <option value="LTOH">Low To High</option>
+                                <option value="HTOL">High To Low</option>
+                            </select>
 
                             <span><i>AC/NON-AC:</i></span>
                             <select
@@ -559,25 +604,28 @@ export default function Booking(props) {
                                 <option value="4">4</option>
                                 <option value="6">6</option>
                             </select>
-                            <span><i>Company</i></span>
-                            <select
-                                id="select_carcompany"
-                                onChange={onChange}
-                            >
-                                <option value="ALL" selected>ALL</option>
-                                <option value="Ford">Ford</option>
-                                <option value="Suzuki">Suzuki</option>
-                            </select>
-                            <span><i>Price:</i></span>
 
+                            <span><i>Fuel:</i></span>
                             <select
-                                id="select_price"
+                                id="select_carfuel"
                                 onChange={onChange}
                             >
                                 <option value="ALL" selected>ALL</option>
-                                <option value="LTOH">Low To High</option>
-                                <option value="HTOL">High To Low</option>
+                                <option value="PETROL">PETROL</option>
+                                <option value="DIESEL">DIESEL</option>
+                                <option value="CNG">CNG</option>
                             </select>
+
+                            <span><i>Transmission:</i></span>
+                            <select
+                                id="select_geartype"
+                                onChange={onChange}
+                            >
+                                <option value="ALL" selected>ALL</option>
+                                <option value="MANUAL">MANUAL</option>
+                                <option value="AUTOMATIC">AUTOMATIC</option>
+                            </select>
+                            
 
 
                         </div>

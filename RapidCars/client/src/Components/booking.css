@@ -86,11 +86,11 @@
 .side_containar .side_block .block {
    
     color: #000000;
-    font-weight: 550;
+    font-weight: 510;
     margin-right: 10px;
     font-size: 14px;
     margin-left: 10px;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif ;
 }
 
 .side_containar .side_block .block11{
@@ -135,6 +135,7 @@
     display: inline;
     margin-right: 10px;
     font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif ;
    
 }
 
@@ -173,7 +174,11 @@
 .top_block  h4{
    
     color: cadetblue;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+   
+    /* margin: 20px , 10px 5px,5px; */
    
 }
 
@@ -350,6 +355,9 @@
     display: none;
 
 }
+#close-button{
+    display: none;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -374,12 +382,17 @@
 
     #view-button{
         font-size: 22px;
-        color:#0f73ee;
+        color:#ffffff;
         display: flex;
-        margin-left: 10px;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 20px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
         position: fixed;
         margin-top: 10px;
-        background-color:#f5f5f5;
+        background-color:#0f73ee;
         margin-right: 4px;
         
 

@@ -25,7 +25,7 @@ body {
   .topnav a {
     float: left;
     display: block;
-    color: #fff;
+    color: rgb(252, 249, 249);
     text-align: center;
     padding: 16px 16px;
     text-decoration: none;
@@ -33,10 +33,10 @@ body {
 
   }
 
-  .active a {
+  /* .active a {
     background-color: #666;
     color: white;
-  }
+  } */
 
  .card-body .form-group submit{
 
@@ -72,14 +72,19 @@ body {
     background-repeat: no-repeat;
   } */
 
-  .topnav a.active {
+  .topnav  .active {
     border-radius: 3px;
-    background: #fff;
-    color: #0f73eee7;
+    background: #0f73eee7;
+    color: #ffffffe7;
   }
 
   .topnav .icon {
     display: none;
+  }
+
+  .topnav Link{
+    color:aqua
+    
   }
 
 

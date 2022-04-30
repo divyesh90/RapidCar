@@ -3,16 +3,18 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Pie } from "react-chartjs-2"
+import { PieChart } from 'react-minimal-pie-chart';
+import { Chart } from 'chart.js';
 import './CarsDetails.css'
 export default function BookingCars() {
 
     const history = useHistory();
-   
+
     const [booking, setbooking] = React.useState(null);
     const [bookingcar, setData] = React.useState(null);
 
-    // var bookingcar
-  
+
 
     React.useEffect(() => {
 
@@ -22,18 +24,13 @@ export default function BookingCars() {
                 console.log(res.data)
                 setbooking(res.data)
                 setData(res.data);
-                // bookingcar = res.data
-               
 
-                // setData( res.data.filter( (val) => {
-                //     return val.booking.IsRuning === true
-                // } ) )
 
                 console.log(res.data);
             })
             .catch(err => {
                 console.log("error")
-               
+
             })
         console.log('karm patel')
 
@@ -97,6 +94,27 @@ export default function BookingCars() {
 
     }
 
+    function bookingPieChart() {
+
+       return(
+        <PieChart
+        data={[
+          { title: 'One', value: 10, color: '#E38627',background:"#C13C37"},
+          { title: 'Two', value: 15, color: '#C13C37' },
+          { title: 'Three', value: 20, color: '#6A2135' },
+        ]}
+       
+      />
+       )
+
+
+        
+
+        console.log("in chart");
+
+
+    }
+
 
 
 
@@ -114,7 +132,7 @@ export default function BookingCars() {
                 // setbooking(bookingcar.filter((val) => {
                 //     return bookingcar._id != res.data
                 // }))
-    
+
 
                 console.log(bookingcar);
             })
@@ -178,12 +196,7 @@ export default function BookingCars() {
                         <td><span className="status text-success"></span>{toDate}</td>
                         <td><span className="status text-success"></span>{booking.booking.BillAmount}</td>
                         <td><span className="status text-success"></span>{booking.booking.Hours}</td>
-                        {/* <td><span className="status text-success"></span>{String(booking.car.IsBook)}</td>
-                        <td><span className="status text-success"></span>{String(booking.booking.IsRuning)}</td> */}
-                        {/* <td>
-                            <a className="settings" title="Description" onClick={() => hidedescription(user._id)} ><i className="material-icons">&#xe873;</i></a>
 
-                        </td> */}
                         <td>
                             {html}
                         </td>
@@ -266,9 +279,17 @@ export default function BookingCars() {
             <div className="p_main">
                 <div className="container">
                     <div className="table-responsive">
+                    
+                    <div id="bookingPie">
+                    {bookingPieChart()}
+                    </div>
+                       
+
                         <div className="table-wrapper">
                             <div className="table-title">
+
                                 <div className="row">
+
                                     <div className="row">
                                         <div className="column">
                                             <h2>Car <b>Details</b></h2>
@@ -320,6 +341,7 @@ export default function BookingCars() {
 
 
                                     {rendercar()}
+                                    
 
 
 

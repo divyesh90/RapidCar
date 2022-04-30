@@ -163,6 +163,10 @@ const  booking_car_sort = (isbook) =>{
                         <td><span className="status text-success"></span>{PurchaseDate}</td>
                         <td><span className="status text-success"></span>{car.seat}</td>
                         <td><span className="status text-success"></span>{car.cartype}</td>
+                        <td><span className="status text-success"></span>{car.fuel}</td>
+                        <td><span className="status text-success"></span>{car.gear_type}</td>
+                        <td><span className="status text-success"></span>{car.mileage}</td>
+                        
 
                         {/* <td>
                             <a className="settings" title="Description" onClick={() => hidedescription(user._id)} ><i className="material-icons">&#xe873;</i></a>
@@ -234,10 +238,7 @@ const  booking_car_sort = (isbook) =>{
                                        
                                     </div>
 
-                                    <div className="col-xs-5">
-                                        <a href="#" className="btn btn-primary"><i className="material-icons">&#xE147;</i> <span onClick={() => history.push("details")}>Add New Product</span></a>
-
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <table className="table table-striped table-hover">
@@ -251,7 +252,10 @@ const  booking_car_sort = (isbook) =>{
                                         <th>Location</th>
                                         <th>Purchase Date</th>
                                         <th>Seater</th>
-                                        <th>Type </th>
+                                        <th>Car_Type</th>
+                                        <th>Car_Fuel</th>
+                                        <th>Car_Gear</th>
+                                        <th>Mileage</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>

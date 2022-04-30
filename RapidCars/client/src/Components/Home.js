@@ -1,6 +1,9 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import './home.css'
-export default function home() {
+export default function Home() {
+
+    const history = useHistory();
     return (
         <div className='home_main'>
             <link
@@ -33,7 +36,7 @@ export default function home() {
                     <h1>Welcome to <span>Rapid Cars</span></h1>
                     <h2>Easy Book and Comfortable Ride</h2>
                     <div className="d-flex">
-                        <a href="/booking" class="btn-get-started scrollto">Get Started</a>
+                        <a  class="btn-get-started scrollto" onClick={ ()=>history.push('/booking')}>Get Started</a>
                     </div>
                 </div>
             </section>
@@ -326,7 +329,7 @@ export default function home() {
                             <div class="info-box mb-4">
                                 <i class="bi bi-geo-alt-fill"></i>
                                 <h3>Our Address</h3>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <p>A108 Near GEB, Naroda,Ahmedabad,330081 Gujrat  </p>
                             </div>
                         </div>
 
@@ -342,7 +345,7 @@ export default function home() {
                             <div class="info-box  mb-4">
                                 <i class="bi bi-telephone-fill"></i>
                                 <h3>Call Us</h3>
-                                <p>+91 2342324235</p>
+                                <p>+91 9999888899</p>
                             </div>
                         </div>
 
@@ -359,10 +362,10 @@ export default function home() {
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
-
+                       
                             <div class="col-lg-3 col-md-6 footer-contact">
                                 <h3>Rapid Cars<span>.</span></h3>
-                                <p>A108 Adam Street <br></br>New York, NY 535022<br></br>United States <br /><br /><strong>Phone:</strong> +1 5589 55488 55<br /><strong>Email:</strong> info@example.com<br /></p>
+                                <p>A108 Near GEB <br></br>Naroda, Ahmedabad <br></br>330081 Gujrat, India<br /><br /><strong>Phone:</strong> +1 9999 8888 99<br /><strong>Email:</strong> rapidcar123@.com<br /></p>
                             </div>
 
                             <div class="col-lg-3 col-md-6 footer-links">

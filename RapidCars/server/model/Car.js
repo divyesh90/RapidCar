@@ -17,6 +17,19 @@ let carSchema = new Schema({
       type: String,
       required: true
    },
+   fuel: {
+      type: String,
+      required: true
+   },
+   mileage:{
+      type:Number,
+      required: true
+
+   },
+   gear_type: {
+      type: String,
+      required: true
+   },
    company: {
       type: String,
       required: true

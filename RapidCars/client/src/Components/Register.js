@@ -1,6 +1,7 @@
 import React from "react";
 import "./login_signup.css";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 // import { useHistory } from 'react-router'
 
@@ -15,8 +16,12 @@ export default function Register() {
     seat: "",
     cpurchase: "",
     cprice: "",
+    fuel:"PETROL",
+    gear_type:"MANUAL",
+    mileage:"",
   });
 
+  const history = useHistory();
 
   const [file, setFile] = useState(null);
 
@@ -24,11 +29,7 @@ export default function Register() {
     setFile(e.target.files[0]);
   };
 
-  // const [file, setFile] = useState(null);
-
-  // const handlefile = (e) => {
-  //   setFile(e.target.files[0]);
-  // };
+ 
   const register = (e) => {
 
     e.preventDefault();
@@ -53,8 +54,9 @@ export default function Register() {
         axios.post("http://localhost:8000/api/carregister", Cardata , config)
         .then( res => {
             console.log("valid input  1233")
-            //history.push('/login');
             console.log(res.data.result)
+            history.push('/cardetails');
+           
         })
         .catch(err => {
            
@@ -80,6 +82,8 @@ export default function Register() {
     });
     console.log(car);
   };
+
+
 
   function validate_input(car) {
     console.log("validate");
@@ -125,13 +129,22 @@ export default function Register() {
     } else {
       document.getElementById("validate_seat").innerHTML = "";
     }
-    if (car.cprice < 100 || car.cprice == "") {
+    if (car.cprice < 10 || car.cprice == "") {
       document.getElementById("validate_price").innerHTML =
         "Price should be given and must be greater than 100";
       IsValid = false;
     } else {
       document.getElementById("validate_price").innerHTML = "";
     }
+
+    if (car.mileage > 100 || car.mileage == "") {
+      document.getElementById("validate_mileage").innerHTML =
+        "Mileage may not be more than 100";
+      IsValid = false;
+    } else {
+      document.getElementById("validate_mileage").innerHTML = "";
+    }
+
     if (car.cpurchase == "") {
       document.getElementById("validate_purchase").innerHTML =
         "Enter Purchase Date";
@@ -157,6 +170,7 @@ export default function Register() {
         rel="stylesheet"
         id="bootstrap-css"
       />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"></link>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link
@@ -165,6 +179,7 @@ export default function Register() {
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"
       />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
       <link
         rel="stylesheet"
@@ -214,9 +229,7 @@ export default function Register() {
                       type="text"
                       className="form-control"
                       placeholder="Car Company"
-                      required
                       name="company"
-                      required
                       value={car.company}
                       onChange={handleChange}
                     />
@@ -262,7 +275,7 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fas fa-key"></i>
+                        <i class="fa-solid fa-chair"></i>
                       </span>
                     </div>
                     <input
@@ -294,10 +307,12 @@ export default function Register() {
                       onChange={handleChange}
                     />
                   </div>
+
+
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fas fa-key"></i>
+                        <i class="bi bi-fan"></i>
                       </span>
                     </div>
                     <select
@@ -311,11 +326,72 @@ export default function Register() {
                       <option value="AC">AC</option>
                     </select>
                   </div>
+
+
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                      <i class="fa-solid fa-gas-pump"></i>
+
+                      </span>
+                    </div>
+                    <select
+                      className="form-control"
+                      value={car.fuel}
+                      name="fuel"
+                      placeholder="Fuel Type"
+                      onChange={handleChange}
+                    >
+                      <option value="PETROL">PETROL</option>
+                      <option value="DIESEL">DIESEL</option>
+                      <option value="CNG">CNG</option>
+                    </select>
+                  </div>
+
+                  
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                      <i class="bi bi-gear-fill"></i>
+                      </span>
+                    </div>
+                    <select
+                      className="form-control"
+                      value={car.gear_type}
+                      name="gear_type"
+                      placeholder="GearType"
+                      onChange={handleChange}
+                    >
+                      <option value="MANUAL">MANUAL</option>
+                      <option value="AUTO">AUTO</option>
+                      
+                    </select>
+                  </div>
+
+                  <div className="validation" id="validate_mileage"></div>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                      <i class="bi bi-speedometer2"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="number"
+                      min="0"
+                      className="form-control"
+                      placeholder="Mileage"
+                      requird
+                      name="mileage"
+                      value={car.mileage}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  
                   <div div className="validation" id="validate_purchase"></div>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fas-fa-calendar-day"></i>
+                      <i class="bi bi-calendar-date-fill"></i>
                       </span>
                     </div>
                     <input

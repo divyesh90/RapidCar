@@ -20,11 +20,13 @@ body {
   height: 100%; 
   width: fit-content;
   align-content: center;
+ 
 }
 
 .card {
+  
   height: fit-content;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: auto;
   width: 400px;
   background-color: rgba(0, 0, 0, 0.5) !important;

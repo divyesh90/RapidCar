@@ -345,6 +345,16 @@ table.table .avatar {
     font-size: 13px;
 }
 
+#bookingPie {
+
+    background-color: #0397d6;
+    height:250px;
+    width:250px;
+    display: block;
+    color: #10c469;
+
+}
+
 
 
 @media only screen and (max-width: 455px) {

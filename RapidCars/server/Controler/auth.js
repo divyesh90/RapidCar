@@ -395,7 +395,7 @@ var Storage = multer.diskStorage({
 
 
         exports.carregister = (req, res, next) => {
-            let { cname, location, carno, cartype, company, seat, cpurchase, cprice, cimage } = req.body;
+            let { cname, location, carno, cartype, company, seat, cpurchase, cprice, fuel, gear_type, mileage, cimage } = req.body;
 
             console.log(req.body);
 
@@ -429,6 +429,15 @@ var Storage = multer.diskStorage({
             if (!cprice) {
                 errors.push({ Car_Price: "required" });
             }
+            if (!fuel) {
+                errors.push({ fuel: "required" });
+            }
+            if (!gear_type) {
+                errors.push({ Gear_type: "required" });
+            }
+            if (!mileage) {
+                errors.push({ Mileage: "required" });
+            }
 
             if (errors.length > 0) {
                 return res.status(422).json({ errors: errors });
@@ -451,6 +460,9 @@ var Storage = multer.diskStorage({
                             seat: seat,
                             cpurchase: cpurchase,
                             cprice: cprice,
+                            fuel: fuel,
+                            gear_type: gear_type,
+                            mileage: mileage,
                             cimage: req.file.filename,
                             IsBook: false,
                         });

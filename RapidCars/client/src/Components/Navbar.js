@@ -45,17 +45,22 @@ const history = useHistory()
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
       <div class="topnav" id="myTopnav">
         <img src="./rapido-final-logo.png" class="logo" />
-        <a> </a>
-        <a> </a>
-        {/* <a className='active' href="/">Home</a>
+        
+        
+        {/* <a  href="/">Home</a>
         <a href="/booking">Booking</a>
         <a href="#home">Home</a>
         <a  href="#home">Home</a> */}
-        <Link to="/">Home</Link>
+        <a></a>
+        <a  className='active' onClick={()=> history.push('/')}>Home</a>
+        <a  className='active' onClick={()=> history.push('/booking')}>Booking</a>
+        <a className='active'  onClick={()=> history.push('/mybooking')}>My Booking</a>
+        <a  className='active' id='logout' onClick={() => redirect()}>{props.login}</a>
+        {/* <div className='active'><Link to="/">Home</Link></div>
         <Link  to="/booking">Booking</Link>
         <Link  to="/mybooking">My Booking</Link>
        
-        <Link  id='logout' onClick={() => redirect()} >{props.login}</Link>
+        <Link  id='logout' onClick={() => redirect()} >{props.login}</Link> */}
         
         <span><a class="icon" onClick={() => myFunction()}>
           < i class="fa fa-bars" id='remove-button'></i>
