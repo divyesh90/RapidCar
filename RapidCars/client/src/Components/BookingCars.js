@@ -280,10 +280,10 @@ export default function BookingCars() {
                 <div className="container">
                     <div className="table-responsive">
                     
-                    <div id="bookingPie">
+                    {/* <div id="bookingPie">
                     {bookingPieChart()}
                     </div>
-                       
+                        */}
 
                         <div className="table-wrapper">
                             <div className="table-title">

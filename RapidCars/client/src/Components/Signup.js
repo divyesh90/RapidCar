@@ -33,7 +33,7 @@ export default function Signup() {
                 })
                 .catch(err => {
                    
-                    // console.log(res.data);
+                    const confirmBox = window.alert("Unsuccesful signup try again!")
                 })
             }
             else
@@ -190,7 +190,7 @@ export default function Signup() {
                                 </div>
 
                                 <div className="form-group">
-                                    <input value="Register" onClick={ () => register()} className="btn float-right login_btn"  />
+                                    <input  type="button" value="Register" onClick={ () => register()} className="btn float-right login_btn"  />
                                 </div>
 
 

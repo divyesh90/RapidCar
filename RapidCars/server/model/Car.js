@@ -50,7 +50,7 @@ let carSchema = new Schema({
       type: String,
       required: true
    },
-   IsBook: {
+   IsBook: { 
       type: Boolean,
       required: true,
       default:false,

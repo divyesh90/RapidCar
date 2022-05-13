@@ -151,7 +151,7 @@ input:focus {
   .card {
     height: fit-content;
     margin-top: 50%;
-    margin-bottom: auto;
+    margin-bottom: 70%;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.445) !important;
   }

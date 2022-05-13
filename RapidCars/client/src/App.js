@@ -30,7 +30,7 @@ function App() {
 
   const [user, setloginuser] = useState({});
 
-  console.log(user);
+  console.log(user._id);
   var uname;
   var login;
 

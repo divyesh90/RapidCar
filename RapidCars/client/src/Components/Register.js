@@ -239,12 +239,11 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fas fa-badge"></i>
+                        <i className="fas fa-car"></i>
                       </span>
                     </div>
                     <input
                       type="text"
-                    
                       className="form-control"
                       placeholder="Car number"
                       required
@@ -275,7 +274,7 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i class="fa-solid fa-chair"></i>
+                      <i class="fa-solid fa-couch"></i>
                       </span>
                     </div>
                     <input

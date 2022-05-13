@@ -69,26 +69,23 @@ export default function Booking(props) {
     function validate_input(car) {
         var IsValid = true;
 
-         console.log(book.todate);
+        console.log(book.todate);
 
 
-        if (book.todate == "") {
-            console.log(book.todate);
-            document.getElementById("date_error").innerHTML =
-                " both date must be require ";
-            IsValid = false;
-        } else {
-            document.getElementById("date_error").innerHTML = "";
-        }
-
-
-        if (book.fromdate == "") {
-            document.getElementById("date_error").innerHTML =
-                "both date must be require ";
-            IsValid = false;
-        } else {
-            document.getElementById("date_error").innerHTML = "";
-        }
+        // if (book.todate == "") {
+        //     console.log(book.todate);
+        //     document.getElementById("date_error").innerHTML =
+        //         " both date must be require ";
+        //     IsValid = false;
+        // }
+        // else if (book.fromdate == "") {
+        //     document.getElementById("date_error").innerHTML =
+        //         "both date must be require ";
+        //     IsValid = false;
+        // }
+        // else {
+        //     document.getElementById("date_error").innerHTML = "";
+        // }
 
         const fromdate = new Date(book.fromdate)
         const todate = new Date(book.todate)
@@ -96,18 +93,23 @@ export default function Booking(props) {
 
         const valid_fromdate = fromdate - new Date()
 
-
-
-        if (fromdate < new Date()) {
+        if (book.todate == "") {
+            console.log(book.todate);
+            document.getElementById("date_error").innerHTML =
+                " both date must be require ";
+            IsValid = false;
+        }
+        else if (book.fromdate == "") {
+            document.getElementById("date_error").innerHTML =
+                "both date must be require ";
+            IsValid = false;
+        }
+        else if (fromdate < new Date()) {
             document.getElementById("date_error").innerHTML =
                 " please check from date ";
             IsValid = false;
-        } else {
-            document.getElementById("date_error").innerHTML = "";
         }
-
-
-        if (diff < 0 || valid_fromdate < 0) {
+        else if (diff < 0 || valid_fromdate < 0) {
             document.getElementById("date_error").innerHTML =
                 " please check from date ";
             IsValid = false;
@@ -206,17 +208,17 @@ export default function Booking(props) {
 
         var newArray = car;
 
-        var fromlocation =  document.getElementById("fromlocation_value").value;
+        var fromlocation = document.getElementById("fromlocation_value").value;
 
         // newArray = newArray.sort((a, b) => (a.location.toUpperCase().includes( String(fromlocation).toUpperCase())  ? -1 : 1))
 
 
-        newArray = car.filter( (val) => {
-            return val.location.toUpperCase().includes( String(fromlocation).toUpperCase())
+        newArray = car.filter((val) => {
+            return val.location.toUpperCase().includes(String(fromlocation).toUpperCase())
         })
 
         console.log(fromlocation)
-        
+
         var cartype = document.getElementById("select_cartype").value;
         console.log(cartype);
         var carseats = document.getElementById("select_carseats").value;
@@ -354,106 +356,106 @@ export default function Booking(props) {
     const rendercar = () => {
         var num = 0;
 
-        if(cardata.length == 0){
+        if (cardata.length == 0) {
 
-            return(<div className='cars' >
-                       
-                        <div className='car_details'>
+            return (<div className='cars' >
 
-                            <div className='carnotfound'>
+                <div className='car_details'>
 
-                            <h2> Sorry ! For this location car is not avalaible select nearest other location</h2>
-                                </div>
-                
-                                
-                        </div>
-                    </div>)
-                
+                    <div className='carnotfound'>
+
+                        <h2> Sorry ! no cars are available for selected choice/s</h2>
+                    </div>
+
+
+                </div>
+            </div>)
+
 
 
         }
 
-        else{
-          
-
-     
-
-        return cardata.map(car => {
-
-            num++;
-
-            var path = "http://localhost:8000/uploads/" + car.cimage;
-            var row_id = "row" + car._id;
-
-            // var pdate = new Date(car.cpurchase);
-            // console.log(pdate.getFullYear());
-            return (
-                <>
-
-                    <div className='cars' onClick={() => updateAmount(car.cprice)} id={row_id} >
-                        <img src={path}></img>
-                        <div className='car_details'>
-
-                            <span> <i class="fas fa-map-marker-alt"> </i> <h3>{car.location}</h3> </span>
-                            <h2>{car.company} {car.cname}</h2>
-                            <h3>Fuel: {car.fuel}</h3>
-                            <br></br>
-                            <h3>Gear: {car.gear_type}  </h3>
-                            <br></br>
-                            <h3>Mileage: {car.mileage} Km/L</h3>
-                            <br></br>
-                            <h3>Seats: {car.seat} {car.cartype}</h3>
-                            <br></br>
-                            <h3>{car.carno} </h3>
-                            <br></br>
-                            <h2><span><i class="fas fa-rupee-sign"></i></span>{car.cprice} /Hours</h2>
-                            <button name="carid" value={car._id}
-
-                                onClick={() => {
+        else {
 
 
-                                    const confirmBox = window.confirm(
-                                        "Do you really want to Booking this Car!" + car.cprice
-                                    )
-                                    if (confirmBox === true) {
-                                        booking_car(car._id, car.cprice)
-                                    }
-                                }}   >   Book Now </button>
+
+
+            return cardata.map(car => {
+
+                num++;
+
+                var path = "http://localhost:8000/uploads/" + car.cimage;
+                var row_id = "row" + car._id;
+
+                // var pdate = new Date(car.cpurchase);
+                // console.log(pdate.getFullYear());
+                return (
+                    <>
+
+                        <div className='cars' onClick={() => updateAmount(car.cprice)} id={row_id} >
+                            <img src={path}></img>
+                            <div className='car_details'>
+
+                                <span> <i class="fas fa-map-marker-alt"> </i> <h3>{car.location}</h3> </span>
+                                <h2>{car.company} {car.cname}</h2>
+                                <h3>Fuel: {car.fuel}</h3>
+                                <br></br>
+                                <h3>Gear: {car.gear_type}  </h3>
+                                <br></br>
+                                <h3>Mileage: {car.mileage} Km/L</h3>
+                                <br></br>
+                                <h3>Seats: {car.seat} {car.cartype}</h3>
+                                <br></br>
+                                <h3>{car.carno} </h3>
+                                <br></br>
+                                <h2><span><i class="fas fa-rupee-sign"></i></span>{car.cprice} /Hours</h2>
+                                <button name="carid" value={car._id}
+
+                                    onClick={() => {
+
+
+                                        const confirmBox = window.confirm(
+                                            "Do you really want to Booking this Car!"
+                                        )
+                                        if (confirmBox === true) {
+                                            booking_car(car._id, car.cprice)
+                                        }
+                                    }}   >   Book Now </button>
+                            </div>
                         </div>
-                    </div>
-                </>
+                    </>
 
-                //         { <tr id={row_id}>
-                //             <td>{num}</td>
-                //             <td> <img src={path} className="avatar" alt="photo" /> </td>
-                //             <td><a> {user.pname}</a></td>
-                //             <td>{user.pcategory}</td>
-                //             <td><span className="status text-success"></span>{user.price}</td>
-                //             <td><span className="status text-success"></span>{user.discount}</td>
-                //             <td><span className="status text-success"></span>{user.sellprice}</td>
+                    //         { <tr id={row_id}>
+                    //             <td>{num}</td>
+                    //             <td> <img src={path} className="avatar" alt="photo" /> </td>
+                    //             <td><a> {user.pname}</a></td>
+                    //             <td>{user.pcategory}</td>
+                    //             <td><span className="status text-success"></span>{user.price}</td>
+                    //             <td><span className="status text-success"></span>{user.discount}</td>
+                    //             <td><span className="status text-success"></span>{user.sellprice}</td>
 
-                //             <td>
-                //                 <a className="settings" title="Description" onClick={() => hidedescription(user._id)} ><i className="material-icons">&#xe873;</i></a>
+                    //             <td>
+                    //                 <a className="settings" title="Description" onClick={() => hidedescription(user._id)} ><i className="material-icons">&#xe873;</i></a>
 
-                //             </td>
-                //             <td>
-                //                 <a className="delete" title="Delete" onClick={() => deleteproduct(user._id)}><span class="material-icons">&#xe872;</span></a>
-                //             </td>
-                //         </tr>
+                    //             </td>
+                    //             <td>
+                    //                 <a className="delete" title="Delete" onClick={() => deleteproduct(user._id)}><span class="material-icons">&#xe872;</span></a>
+                    //             </td>
+                    //         </tr>
 
-                //         <th></th>
-                //         <div id={des_id} className="descri"> {user.decription}</div> }
+                    //         <th></th>
+                    //         <div id={des_id} className="descri"> {user.decription}</div> }
 
 
-                //         {/* <div className="description" id={des_id} >
-                //   <th>Description  </th> <td> {user.decription} </td>
-                //   </div> }
+                    //         {/* <div className="description" id={des_id} >
+                    //   <th>Description  </th> <td> {user.decription} </td>
+                    //   </div> }
 
-                //     </> }
-            )
-        })
+                    //     </> }
+                )
+            })
 
-    }
+        }
     }
 
 
@@ -472,7 +474,9 @@ export default function Booking(props) {
                     < i class="fa fa-bars" onClick={() => w3_open()} ></i>
                 </a></span>
 
-{/* 
+                {/* <span id='price'><a class="icon">Charges</a></span> */}
+
+                {/* 
                 <div id='billamount'>
 
                     
@@ -565,7 +569,7 @@ export default function Booking(props) {
                     <div className='side_block' id="side_block">
 
                         <div className='block'>
-                        <span><i>Company</i></span>
+                            <span><i>Company</i></span>
                             <select
                                 id="select_carcompany"
                                 onChange={onChange}
@@ -625,7 +629,7 @@ export default function Booking(props) {
                                 <option value="MANUAL">MANUAL</option>
                                 <option value="AUTOMATIC">AUTOMATIC</option>
                             </select>
-                            
+
 
 
                         </div>

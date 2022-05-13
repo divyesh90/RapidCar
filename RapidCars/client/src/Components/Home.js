@@ -52,7 +52,7 @@ export default function Home() {
                         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                             <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
                                 <div className="icon"><i class="bi bi-search"></i></div>
-                                <h4 className="title"><a href="">Find your car</a></h4>
+                                <h4 className="title"><a href="/booking">Find car</a></h4>
                                 <p className="description">Search the car which you want for booking and select book button</p>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export default function Home() {
                         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                             <div className="icon-box" data-aos="fade-up" data-aos-delay="200">
                                 <div className="icon"><i class="bi bi-box-arrow-in-right"></i></div>
-                                <h4 className="title"><a href="">Enter your route</a></h4>
+                                <h4 className="title"><a href="/booking">Enter your route</a></h4>
                                 <p className="description">Enter your starting and ending location with journey time and then you can book the car</p>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function Home() {
                         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                             <div className="icon-box" data-aos="fade-up" data-aos-delay="300">
                                 <div className="icon"><i class='fas fa-car'></i></div>
-                                <h4 className="title"><a href=""> Get your car</a></h4>
+                                <h4 className="title"><a> Get your car</a></h4>
                                 <p className="description">After booking get the car from our store for the ride.</p>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ export default function Home() {
                         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                             <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
                                 <div className="icon"><i class="bi bi-geo-alt"></i></div>
-                                <h4 className="title"><a href="">Return car</a></h4>
+                                <h4 className="title"><a>Return car</a></h4>
                                 <p className="description">Return the car after your journey is over after your specified time.</p>
                             </div>
                         </div>
@@ -108,19 +108,13 @@ export default function Home() {
                             </p>
                             <ul>
                                 <li>
-                                    <i className="bx bx-store-alt"></i>
+                                <i class='fas fa-car'></i>
                                     <div>
                                         <h5>Car booking done easily</h5>
                                         <p>Booking will be done within couple minutes in our website and after done a confirmation mail is send to the customer.</p>
                                     </div>
                                 </li>
-                                {/* <li>
-                                <i className="bx bx-images"></i>
-                                <div>
-                                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                                </div>
-                            </li> */}
+                                
                             </ul>
                             <p>
                                 Rapid Cars Always give more choices the customers and we always do
@@ -189,7 +183,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                             <div className="icon-box">
                                 <div className="icon"><i class="bi bi-geo-alt-fill"></i></div>
-                                <h4><a href="">Easy Booking</a></h4>
+                                <h4><a>Easy Booking</a></h4>
                                 <p>Your boooking are done in one click after choosing your choice car.</p>
                             </div>
                         </div>
@@ -197,7 +191,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
                             <div className="icon-box">
                                 <div className="icon"> <i class='fas fa-car'></i></div>
-                                <h4><a href="">Good Condition Cars</a></h4>
+                                <h4><a >Good Condition Cars</a></h4>
                                 <p>Car are serviced time to time and giving good mileage.</p>
                             </div>
                         </div>
@@ -205,7 +199,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
                             <div className="icon-box">
                                 <div className="icon"><i class="bi bi-tag-fill"></i></div>
-                                <h4><a href="">Best Offers</a></h4>
+                                <h4><a>Best Offers</a></h4>
                                 <p>We give you better offer and more choices to our customers. </p>
                             </div>
                         </div>
@@ -213,7 +207,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
                             <div className="icon-box">
                                 <div className="icon"><i class='fas fa-users'></i></div>
-                                <h4><a href="">Friendly Staff</a></h4>
+                                <h4><a>Friendly Staff</a></h4>
                                 <p>Our staff are hardworking and good natured ready to solve problem any time.</p>
                             </div>
                         </div>
@@ -221,7 +215,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                             <div className="icon-box">
                                 <div className="icon"><i class="bi bi-phone-fill"></i></div>
-                                <h4><a href=""></a>Mobile Ready</h4>
+                                <h4><a>Mobile Ready</a></h4>
                                 <p>Our website can run o mobile as well as PC so you can book from mobile too.</p>
                             </div>
                         </div>
@@ -229,7 +223,7 @@ export default function Home() {
                         <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
                             <div className="icon-box">
                                 <div className="icon"><i class="bi bi-x-circle-fill"></i></div>
-                                <h4><a href="">Easy Cancellation</a></h4>
+                                <h4><a>Easy Cancellation</a></h4>
                                 <p>You can cancel booking within 48 hr of booking but after that charged will be applied.</p>
                             </div>
                         </div>

@@ -5,7 +5,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 
-export default function Login( {setloginuser } ) {
+export default function Login({ setloginuser }) {
+
+   
 
     const history = useHistory()
     const [user, setUser] = useState({
@@ -14,7 +16,11 @@ export default function Login( {setloginuser } ) {
     })
 
 
-    function login() {
+    function login()  {
+
+
+        console.log(" in login")
+
 
         if (validate_input(user) == true) {
 
@@ -22,30 +28,28 @@ export default function Login( {setloginuser } ) {
 
             axios.post("http://localhost:8000/api/signin", user)
                 .then(res => {
-                    
-                    console.log(res.data.message.email);
+
+                    // console.log(res.data.message.email);
                     setloginuser(res.data.message);
                     window.localStorage.setItem("user_login", "yes")
-                    window.localStorage.setItem("user" , JSON.stringify(res.data.message))
-                    
-                    if (res.data.message.email === "rapidcars123@gmail.com"){
+                    window.localStorage.setItem("user", JSON.stringify(res.data.message))
+
+                    if (res.data.message.email === "rapidcars123@gmail.com") {
 
                         history.push({
-                            pathname :'/cardetails',
+                            pathname: '/cardetails',
                         });
                     }
-                    else{
-
-                        console.log("ddfsd")
-
+                    else {
                         history.push('/')
+                        console.log("hello");
 
                     }
-                   
-                })
-                .catch(err => {
 
-                    console.log(err.data);
+                })
+                .catch(res => {
+                    const confirmBox = window.alert("In correct password or Email")
+
                 })
         }
         else {
@@ -58,11 +62,11 @@ export default function Login( {setloginuser } ) {
     // localStorage.removeItem('user')
     //console.log("dsfdsfddgd")
 
-   
-    
+
+
 
     function validate_input(user) {
-       
+
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var IsValid = true;
 
@@ -75,7 +79,7 @@ export default function Login( {setloginuser } ) {
             document.getElementById('validate_email').innerHTML = ""
         }
 
-        if ( user.password.length < 6 || user.password == '') {
+        if (user.password.length < 6 || user.password == '') {
             document.getElementById('validate_password').innerHTML = "Password must be atleast 6 latter"
             IsValid = false
         }
@@ -138,7 +142,7 @@ export default function Login( {setloginuser } ) {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" className="form-control" placeholder="Email" required name="email"  value={user.email} onChange={handleChange} />
+                                        <input type="text" className="form-control" placeholder="Email" required name="email" value={user.email} onChange={handleChange} />
 
                                     </div>
 
@@ -156,16 +160,16 @@ export default function Login( {setloginuser } ) {
                                         <input type="checkbox" />Remember Me
                                     </div>
                                     <div className="form-group">
-                                        <input value="Login" onClick= { ()=>login()} className="btn float-right login_btn" ></input>
+                                        <input type="button" value="Sign In" onClick={() =>login()} className="btn float-right login_btn" ></input>
                                     </div>
                                 </form>
                             </div>
                             <div className="card-footer">
                                 <div className="d-flex justify-content-center links">
-                                    Don't have an account?<Link to = '/signup'>Signup</Link>
+                                    Don't have an account?<Link to='/signup'>Signup</Link>
                                 </div>
                                 <div className="d-flex justify-content-center">
-                                <a href="/forgetpassword">Forgot your password?</a>
+                                    <a href="/forgetpassword">Forgot your password?</a>
                                 </div>
                             </div>
                         </div>

@@ -278,16 +278,18 @@
     padding: 10px;
     margin-bottom: 10px;
     height: 220px;
+    justify-content: center;
     
 }
 
 .booking_containar .booking_block .car_data .cars img {
     width: 274px;
     height: 154px;
-    margin-right: auto;
-    float: left;
-    margin-top: auto;
+    margin-top: 30px;
     margin-bottom: auto;
+    float: left;
+    
+
 }
 
 .booking_containar .booking_block .car_data .cars .car_details {
@@ -397,6 +399,26 @@
         
 
     }
+
+
+    #price{
+        font-size: 12px;
+        color:#ffffff;
+        display: flex;
+       
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 20px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        position: fixed;
+        margin-top: 98%;
+        background-color:#0f73ee;
+        margin-right: 4px;
+        
+
+    }
     #close-button{
         font-size: 25px;
         font-weight: 600;
@@ -436,12 +458,11 @@
        display: none;
         position:fixed;
         width: 90%;
-        height :400px;
+        height :300px;
+        overflow: scroll;
         background-color:  #f5f5f5;
         float: left;
-        overflow: hidden;
-       
-     
+      
     }
 
     .side_containar .responsiveBooking {

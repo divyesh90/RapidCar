@@ -80,7 +80,7 @@ exports.sendotp = (req, res) => {
         service: 'gmail',
         auth: {
             user: 'rapidcars123@gmail.com',
-            pass: 'bharg2210'
+            pass: 'bharg@123'
         }
     });
 
@@ -333,7 +333,7 @@ exports.signin = (req, res) => {
 
                             if (!isMatch) {
 
-                                return res.status(400).json({
+                                return res.status(200).json({
                                     errors: [{
                                         password:
                                             "incorrect"
@@ -342,10 +342,13 @@ exports.signin = (req, res) => {
                             }
                             else {
 
+                                
+
                                 return res.status(200).json({
                                     success: true,
                                     message: user
                                 });
+                                
 
                             }
                             // let access_token = createJWT(
@@ -371,12 +374,18 @@ exports.signin = (req, res) => {
                             // });
                         }).catch(err => {
 
-                            res.status(500).json({ erros: err });
+                            res.status(500).json({ 
+                                erros: err,
+                                message: user 
+                            });
                         });
                     }
                 }).catch(err => {
 
-                    res.status(500).json({ erros: err });
+                    res.status(500).json({ 
+                        erros: err,
+                        message: user  
+                    });
                 });
             }
 
@@ -688,7 +697,7 @@ var Storage = multer.diskStorage({
                     service: 'gmail',
                     auth: {
                         user: 'rapidcars123@gmail.com',
-                        pass: 'bharg2210'
+                        pass: 'bharg@123'
                     }
                 });
 
@@ -1005,3 +1014,17 @@ var Storage = multer.diskStorage({
 
 
         }
+
+        var Storage = multer.diskStorage({
+            destination:"./public/uploads/",
+            filename: (req, file, cb) => {
+                cb(null, file.fieldname + '_' + Date.now()+ path.extname(file.originalname));
+                console.log(" in filename ")
+            }
+        });
+
+        var upload;
+         
+        exports.upload = multer({
+            storage: Storage
+            }).single('file');
