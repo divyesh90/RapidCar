@@ -22,12 +22,9 @@ export default function Forgetpas() {
 
         if (validate_input(user) == true) {
 
-            console.log("in reset")
-
             axios.post("http://localhost:8000/api/resetpass", user)
                 .then(res => {
-                    console.log("valid input  1233")
-                    console.log(res.data);
+                  
                     if (res.data.email) {
 
                         console.log("Password updated")
@@ -37,13 +34,11 @@ export default function Forgetpas() {
                     }
                     else {
 
-
-
+                        console.log("sosmethon errot Password not updated")
                     }
 
                 })
                 .catch(err => {
-
                     console.log(err.data);
                 })
         }
@@ -53,40 +48,30 @@ export default function Forgetpas() {
 
     }
 
-
     function SendOtp() {
 
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var IsValid = true;
 
-
         if (!user.email.match(mailformat) || user.email == '') {
-
             document.getElementById('validate_email').innerHTML = "Invalid Email Format"
-            console.log("invalid input");
-
 
         }
         else {
 
-
-            console.log("in posrt")
-
             axios.post("http://localhost:8000/api/sendotp", user)
                 .then(res => {
-                    console.log("send otp")
+
                     console.log(res.data);
 
                     if (res.data.result) {
 
-                        console.log("mail send")
                         document.getElementById("otp_block").style.display = "block"
                         document.getElementById("reset_email").readOnly = true;
 
                     }
                     else {
                         document.getElementById("otp_block").style.display = "none"
-                        console.log("ddfsd")
                     }
 
                 })
@@ -111,16 +96,12 @@ export default function Forgetpas() {
 
         }
         else {
-            console.log("in posrt")
-
             axios.post("http://localhost:8000/api/cmpotp", user)
                 .then(res => {
-                    console.log("validate otp")
                     console.log(res.data);
 
                     if (res.data.success === true) {
                         document.getElementById('validate_otp').innerHTML = ""
-                        console.log("otp true")
                         document.getElementById("resetpass").style.display = "block"
                         document.getElementById("reset_otp").readOnly = true;
 
@@ -129,8 +110,6 @@ export default function Forgetpas() {
                         document.getElementById('validate_otp').innerHTML = "OTP not match"
                         document.getElementById("resetpass").style.display = "none"
                         console.log("OTP Wrong")
-
-
                     }
 
                 })
@@ -293,12 +272,7 @@ export default function Forgetpas() {
                                 </form>
                             </div>
                             <div className="card-footer">
-                                {/* <div className="d-flex justify-content-center links">
-                                    Don't have an account?<Link to='/signup'>Signup</Link>
-                                </div>
-                                <div className="d-flex justify-content-center">
-                                    <a href="#">Forgot your otp?</a>
-                                </div> */}
+                                
                             </div>
                         </div>
                     </div>

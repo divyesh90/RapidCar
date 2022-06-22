@@ -7,12 +7,8 @@
     float: right;
  }
 
-
  .mybooking_containar{
-
-   
     height :100%;
-    
     background-color: rgb(223, 221, 221);;
 }
 
@@ -50,8 +46,6 @@
 }
 
 .mybooking_containar .mybooking_block .booking_car .cars .car_details {
-   
-    
     margin-left: auto;
     margin-right: 10%;
     padding: 10px;
@@ -61,7 +55,6 @@
 }
 
 .mybooking_containar .mybooking_block .booking_car .cars .car_details h2{
-
     color: #1f1f1f;
     padding: 0;
     margin: 8px 0 2px;
@@ -71,7 +64,6 @@
 }
 
 .mybooking_containar .mybooking_block .booking_car .cars .car_details span{
-
     color: #0f73ee;
     display: inline;
     margin-right: 5px;
@@ -120,7 +112,7 @@
 
 
 @media only screen and (max-width: 455px) {
-
+    
     .mybooking_containar .mybooking_block .booking_car .cars{
         border-radius: 4px;
         border: 1px solid #0f73ee;

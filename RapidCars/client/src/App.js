@@ -16,7 +16,6 @@ import {
 } from "react-router-dom";
 
 import CarsDetails from './Components/CarsDetails';
-import ExportPdfComponent from './Components/ExportPdfComponent';
 import BookingCars from './Components/BookingCars';
 import AdminNavbar from './Components/AdminNavbar';
 import Home from "./Components/Home";
@@ -25,31 +24,15 @@ import Forgetpas from './Components/Forgetpas';
 
 
 function App() {
-
-
-
   const [user, setloginuser] = useState({});
-
-  console.log(user._id);
   var uname;
   var login;
-
   var user_login = window.localStorage.getItem('user_login')
 
   if (!user._id && user_login == "yes") {
-    console.log("local")
-
     setloginuser(JSON.parse(window.localStorage.getItem('user')));
   }
 
-
-
-  console.log(user_login);
-
-
-
-
-  console.log(user);
   if (user.name)
     uname = user.name;
   else
@@ -60,8 +43,6 @@ function App() {
   else
     login = "Login"
 
-  console.log("in app.js");
-
   return (
     <Router>
       <div className="App">
@@ -71,37 +52,23 @@ function App() {
           <Route exact path='/'>
             <>
               <Navbar setloginuser={setloginuser} uname={uname} login={login} />
-              <Home/>
+              <Home />
             </>
 
 
           </Route>
-
-
           <Route path='/booking' >
 
             {
-              user._id ?
-                <>
-                  <Navbar setloginuser={setloginuser} uname={uname} login={login} />
-                  <Booking user_id={user._id} />
-                </>
-                :
-                <>
 
-                  <Login setloginuser={setloginuser} />
-                </>
-
-
-
+              <>
+                <Navbar setloginuser={setloginuser} uname={uname} login={login} />
+                <Booking user_id={user._id} />
+              </>
             }
 
-
-
           </Route>
-
           <Route path='/mybooking' >
-
             {
               user._id ?
                 <>
@@ -110,109 +77,69 @@ function App() {
                 </>
                 :
                 <Login setloginuser={setloginuser} />
-
-
-
-
             }
           </Route>
+          <Route path='/login'>
+            <>
+              <Login setloginuser={setloginuser} />
+            </>
 
+          </Route>
+          <Route path='/forgetpassword'>
+            <>
+              <Forgetpas />
+            </>
 
-          <Route path='/invoice' >
+          </Route>
+          <Route path='/signup'>
+            <>
+              <Signup />
+            </>
+
+          </Route>
+          <Route path='/cardetails' >
 
             {
-              user._id ?
+              user.email == "rapidcars123@gmail.com" ?
                 <>
-                  <Navbar setloginuser={setloginuser} uname={uname} login={login} />
-                  <ExportPdfComponent />
+                  <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
+                  <CarsDetails />
+                </>
+                :
+                <Login setloginuser={setloginuser} />
+            }
+          </Route>
+          <Route path='/register'>
+            {
+              user.email == "rapidcars123@gmail.com" ?
+                <>
+                  <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
+                  <Register />
                 </>
                 :
                 <Login setloginuser={setloginuser} />
 
-
-
-
             }
           </Route>
-
-        
-
-        
-
-        <Route path='/login'>
-          <>
-            <Login setloginuser={setloginuser} />
-          </>
-
-        </Route>
-
-        <Route path='/forgetpassword'>
-          <>
-            <Forgetpas />
-          </>
-
-        </Route>
-        <Route path='/signup'>
-          <>
-            <Signup />
-          </>
-
-        </Route>
-
-        <Route path='/cardetails' >
-
-          {
-            user.email =="rapidcars123@gmail.com" ?
-              <>
-                <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
-                <CarsDetails />
-              </>
-              :
-              <Login setloginuser={setloginuser} />
-
-
-
-
-          }
-          </Route>
-
-          <Route path='/register'>
-          {
-            user.email =="rapidcars123@gmail.com"?
-              <>
-                <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
-                <Register />
-              </>
-              :
-              <Login setloginuser={setloginuser} />
-
-          }
-          </Route>
-
           <Route path='/bookingcars' >
 
-          {
-            user.email =="rapidcars123@gmail.com" ?
-              <>
-                <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
-                <BookingCars />
-              </>
-              :
-              <Login setloginuser={setloginuser} />
+            {
+              user.email == "rapidcars123@gmail.com" ?
+                <>
+                  <AdminNavbar setloginuser={setloginuser} uname={uname} login={login} />
+                  <BookingCars />
+                </>
+                :
+                <Login setloginuser={setloginuser} />
 
-          }
+            }
 
-        </Route>
+          </Route>
           <Redirect to="/" />
         </Switch>
-
-        {/* <Login/> */}
-        {/* <Signup/> */}
-
 
       </div>
     </Router>
   );
 }
-
 export default App;

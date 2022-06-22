@@ -5,9 +5,6 @@ const path= require('path');
 const  fs = require('fs');
 const { signup, signin , carregister,cardata , booking, bookingdata , canclebooking,BookingComplete,system_bookingdata,removecar,sendotp,cmpotp , resetpass,upload} = require('../Controler/auth');
 
-
-
-    
 router.post('/signup', signup);
 router.post('/signin', signin);
 router.post('/carregister',upload, carregister);

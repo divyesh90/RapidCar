@@ -3,10 +3,10 @@ import "./login_signup.css";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-// import { useHistory } from 'react-router'
+
 
 export default function Register() {
-  // const history= useHistory()
+
   const [car, setcar] = useState({
     cname: "",
     location: "",
@@ -16,9 +16,9 @@ export default function Register() {
     seat: "",
     cpurchase: "",
     cprice: "",
-    fuel:"PETROL",
-    gear_type:"MANUAL",
-    mileage:"",
+    fuel: "PETROL",
+    gear_type: "MANUAL",
+    mileage: "",
   });
 
   const history = useHistory();
@@ -29,50 +29,41 @@ export default function Register() {
     setFile(e.target.files[0]);
   };
 
- 
+
   const register = (e) => {
 
     e.preventDefault();
 
-    if( validate_input(car) == true)
-    {
-   
+    if (validate_input(car) == true) {
+
       var Cardata = new FormData();
       Cardata.append("file", file);
       for (var key in car) {
         Cardata.append(key, car[key]);
       }
-  
+
       const config = {
         Headers: {
           "content-type": "multipart/form-data",
         },
       };
-  
-   
-       
-        axios.post("http://localhost:8000/api/carregister", Cardata , config)
-        .then( res => {
-            console.log("valid input  1233")
-            console.log(res.data.result)
-            history.push('/cardetails');
-           
+
+
+
+      axios.post("http://localhost:8000/api/carregister", Cardata, config)
+        .then(res => {
+          history.push('/cardetails');
         })
         .catch(err => {
-           
-            console.log(err);
+
+          console.log(err);
         })
     }
-    else
-    {
-        console.log("invalid input");
+    else {
+      console.log("invalid input");
     }
 
-}
-
-  // localStorage.setItem('login', 'no')
-  // localStorage.removeItem('car')
-  //console.log("dsfdsfddgd")
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,7 +78,7 @@ export default function Register() {
 
   function validate_input(car) {
     console.log("validate");
-    // console.log(car)
+
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var carno = /^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{1,2}\s[0-9]{4}$/;
     var IsValid = true;
@@ -152,14 +143,7 @@ export default function Register() {
     } else {
       document.getElementById("validate_purchase").innerHTML = "";
     }
-    // if (car.cimage == "") {
-    //   document.getElementById("validate_image").innerHTML =
-    //     "Upload Image";
-    //   IsValid = false;
-    // } else {
-    //   document.getElementById("validate_image").innerHTML = "";
-    // }
-    //console.log(IsValid);
+
     return IsValid;
   }
 
@@ -197,8 +181,8 @@ export default function Register() {
               </div>
               <div className="card-body">
                 <form onSubmit={register}
-                     
-                     enctype="multipart/form-data">
+
+                  enctype="multipart/form-data">
 
                   <div className="validation" id="validate_cname"></div>
                   <div className="input-group form-group">
@@ -274,7 +258,7 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i class="fa-solid fa-couch"></i>
+                        <i class="fa-solid fa-couch"></i>
                       </span>
                     </div>
                     <input
@@ -330,7 +314,7 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i class="fa-solid fa-gas-pump"></i>
+                        <i class="fa-solid fa-gas-pump"></i>
 
                       </span>
                     </div>
@@ -347,11 +331,11 @@ export default function Register() {
                     </select>
                   </div>
 
-                  
+
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i class="bi bi-gear-fill"></i>
+                        <i class="bi bi-gear-fill"></i>
                       </span>
                     </div>
                     <select
@@ -363,7 +347,7 @@ export default function Register() {
                     >
                       <option value="MANUAL">MANUAL</option>
                       <option value="AUTO">AUTO</option>
-                      
+
                     </select>
                   </div>
 
@@ -371,7 +355,7 @@ export default function Register() {
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i class="bi bi-speedometer2"></i>
+                        <i class="bi bi-speedometer2"></i>
                       </span>
                     </div>
                     <input
@@ -385,12 +369,12 @@ export default function Register() {
                       onChange={handleChange}
                     />
                   </div>
-                  
+
                   <div div className="validation" id="validate_purchase"></div>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i class="bi bi-calendar-date-fill"></i>
+                        <i class="bi bi-calendar-date-fill"></i>
                       </span>
                     </div>
                     <input
@@ -417,13 +401,13 @@ export default function Register() {
                       placeholder="Upload image"
                       value={car.file}
                       onChange={handlefile}
-                     
+
                     />
                   </div>
-                  
+
                   <div className="form-group">
                     <button
-                      type ="submit"
+                      type="submit"
                       value="Register"
                       placeholder="Submit"
                       className="btn float-right login_btn"
@@ -431,7 +415,7 @@ export default function Register() {
                   </div>
                 </form>
               </div>
-              
+
             </div>
           </div>
         </div>

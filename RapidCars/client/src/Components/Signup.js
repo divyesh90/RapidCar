@@ -4,11 +4,8 @@ import { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
-// import { useHistory } from 'react-router'
 
 export default function Signup() {
-
-
         const history= useHistory()
         const [ user , setUser] = useState({
             uname: "",
@@ -24,15 +21,11 @@ export default function Signup() {
     
             if( validate_input(user) == true)
             {
-
                 axios.post("http://localhost:8000/api/signup", user)
                 .then( res => {
-                    console.log("valid input  1233")
                     history.push('/login');
-                    console.log(res.data.result.email)
                 })
                 .catch(err => {
-                   
                     const confirmBox = window.alert("Unsuccesful signup try again!")
                 })
             }
@@ -42,11 +35,6 @@ export default function Signup() {
             }
     
         }
-    
-        // localStorage.setItem('login', 'no')
-        // localStorage.removeItem('user')
-        //console.log("dsfdsfddgd")
-    
     
         const handleChange= e=> {
             const { name , value} = e.target
@@ -60,7 +48,6 @@ export default function Signup() {
 
          function  validate_input (user) {
             console.log("validate")
-           // console.log(user)
             var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             var phoneno = /^\d{10}$/;
             var IsValid = true;
@@ -107,7 +94,6 @@ export default function Signup() {
                 document.getElementById('validate_repassword').innerHTML=""
             }
 
-            //console.log(IsValid);
             return IsValid;
             
 
@@ -207,8 +193,7 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-
-
+            
         </div>
     )
 }

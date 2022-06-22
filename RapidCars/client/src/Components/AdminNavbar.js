@@ -3,17 +3,10 @@ import './navbar.css'
 import { Link } from 'react-router-dom'
 import { Redirect } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
-
-
 export default function AdminNavbar( props ) {
-
-
-
 const history = useHistory()
 
   function myFunction() {
-
-    
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
@@ -56,10 +49,6 @@ const history = useHistory()
           < i class="fa fa-bars" id='remove-button'></i>
         </a></span>
         <span><a href="#a"><i class="fas fa-user"></i>{props.uname}</a></span>
-
-        {/* <span><a id='logout' onClick={() => redirect()}>{props.login}</a> <i id='logout_ico'></i> </span>
-        <span><a href="#a"><i class="fas fa-user"></i>{props.uname}</a></span> */}
-
         
       </div>
     </div>

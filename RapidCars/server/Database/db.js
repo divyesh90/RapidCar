@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// db
+console.log(process.env.DATABASE);
+console.log("hello");
 mongoose
  .connect(process.env.DATABASE,{
     useNewUrlParser: true,

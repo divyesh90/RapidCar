@@ -1,28 +1,9 @@
-/* body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-}
 
-a {
-  color: #106eea;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #3b8af2;
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
-} */
 .home_main{
 
   padding-top: 53px;
   display: block;
   background-color: rgb(247, 247, 247);
- 
-
 }
 
 #hero {

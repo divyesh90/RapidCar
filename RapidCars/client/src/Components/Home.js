@@ -45,8 +45,6 @@ export default function Home() {
                 <div className="container" data-aos="fade-up">
                     <div className="section-title">
                         <h2>How we work</h2>
-                        {/* <h3>Find Out More <span>About Us</span></h3> */}
-                        {/* <p>Below we have shown the small .</p> */}
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -134,7 +132,6 @@ export default function Home() {
                         <div className="col-lg-3 col-md-6">
                             <div className="count-box">
                                 <i className="bi bi-emoji-smile"></i>
-                                {/* <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span> */}
                                 <span>500</span>
                                 <p>Happy Clients</p>
                             </div>
@@ -150,7 +147,6 @@ export default function Home() {
                         <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div className="count-box">
                                 <i className="bi bi-headset"></i>
-                                {/* <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" className="purecounter"></span> */}
                                 <span>24X7</span>
                                 <p>Hours Of Support</p>
                             </div>
@@ -159,7 +155,6 @@ export default function Home() {
                         <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div className="count-box">
                                 <i class="bi bi-people"></i>
-                                {/* <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" className="purecounter"></span> */}
                                 <span>20</span>
                                 <p>Hard Workers</p>
                             </div>
@@ -234,80 +229,6 @@ export default function Home() {
             </section>
 
 
-            {/* <section id="faq" className="faq section-bg">
-      <div className="container" data-aos="fade-up">
-
-        <div className="section-title">
-          <h2>F.A.Q</h2>
-          <h3>Frequently Asked <span>Questions</span></h3>
-          <p>These are the common questions asked by the customers joined with our website.</p>
-        </div>
-
-        <div className="row justify-content-center">
-          <div className="col-xl-10">
-            <ul className="faq-list">
-
-              <li>
-                <div data-bs-toggle="collapse" className="collapsed question" href="#faq1">How old do I need to be to rent a Car from Rapid Cars? <i className="bi bi-chevron-down icon-show"></i><i className="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq1" className="collapse" data-bs-parent=".faq-list">
-                  <p>
-                  You can rent an car from Rapid Cars if you are 18 years or above
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Do I need to pick up the car from Rapid Cars rental office? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    All the cars are picked up from the nearby rapid cars store and the booking charges should be given there only.
-                    Rapid Cars holds the right to cancel the booking in such case.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question"> I need to drop off the car at a different location, can I do that? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                  No. The car should be dilvered back to the place where it was picked up from.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What if I return the car late? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                   Additional charges will be applied according to the time it was late and the car taken. 
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">What fuel types are available in Rapid cars?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Rapid cars provide diesel and petrol fuel type cars which gives better mileage.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq6" className="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                  </p>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section> */}
 
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
@@ -344,8 +265,6 @@ export default function Home() {
                         </div>
 
                     </div>
-
-
 
                 </div>
             </section>
@@ -401,13 +320,6 @@ export default function Home() {
                 </div>
             </footer>
         </div>
-
-
-
-
-
-
-
 
     )
 }

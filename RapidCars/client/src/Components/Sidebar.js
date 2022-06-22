@@ -9,9 +9,7 @@ export default function Sidebar() {
         document.getElementById("booking_main").style.marginLeft = "25%";
         document.getElementById("mySidebar").style.width = "25%";
         document.getElementById("mySidebar").style.display = "block";
-        // document.getElementById("openSidebar").style.display = 'none';
     }
-
 
     function sidebar_close() {
         document.getElementById("main").style.marginLeft = "0%";
@@ -24,19 +22,12 @@ export default function Sidebar() {
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 
-
-            
             <button id='openSidebar' onClick={() => sidebar_open()}><i class="fa fa-bars"></i></button>
-
-         
                 <div className='sidebar'   id='mySidebar'>
-
                 <h1>helo</h1>
                 <h1>helo </h1>
                 <h1>helo </h1>
                 <h1>helo </h1>
-
-
            </div>
         </div>
 

@@ -7,29 +7,21 @@ import { useHistory } from 'react-router-dom'
 
 export default function Login({ setloginuser }) {
 
-   
-
     const history = useHistory()
     const [user, setUser] = useState({
         email: "",
         password: ""
     })
 
-
-    function login()  {
-
-
-        console.log(" in login")
+    function login() {
 
 
         if (validate_input(user) == true) {
 
-            console.log("in posrt")
 
             axios.post("http://localhost:8000/api/signin", user)
                 .then(res => {
 
-                    // console.log(res.data.message.email);
                     setloginuser(res.data.message);
                     window.localStorage.setItem("user_login", "yes")
                     window.localStorage.setItem("user", JSON.stringify(res.data.message))
@@ -42,14 +34,12 @@ export default function Login({ setloginuser }) {
                     }
                     else {
                         history.push('/')
-                        console.log("hello");
-
                     }
 
                 })
                 .catch(res => {
-                    const confirmBox = window.alert("In correct password or Email")
 
+                    console.log(res)
                 })
         }
         else {
@@ -58,18 +48,10 @@ export default function Login({ setloginuser }) {
 
     }
 
-    // localStorage.setItem('login', 'no')
-    // localStorage.removeItem('user')
-    //console.log("dsfdsfddgd")
-
-
-
-
     function validate_input(user) {
 
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var IsValid = true;
-
 
         if (!user.email.match(mailformat) || user.email == '') {
             document.getElementById('validate_email').innerHTML = "Invalid Email Format"
@@ -87,8 +69,6 @@ export default function Login({ setloginuser }) {
             document.getElementById('validate_password').innerHTML = ""
         }
 
-        console.log(IsValid)
-
         return IsValid;
 
     }
@@ -99,11 +79,7 @@ export default function Login({ setloginuser }) {
             ...user,
             [name]: value
         })
-
-
     }
-
-
 
     return (
         <div>
@@ -160,7 +136,7 @@ export default function Login({ setloginuser }) {
                                         <input type="checkbox" />Remember Me
                                     </div>
                                     <div className="form-group">
-                                        <input type="button" value="Sign In" onClick={() =>login()} className="btn float-right login_btn" ></input>
+                                        <input type="button" value="Sign In" onClick={() => login()} className="btn float-right login_btn" ></input>
                                     </div>
                                 </form>
                             </div>

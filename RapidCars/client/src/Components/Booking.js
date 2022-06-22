@@ -5,7 +5,6 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 import { useState } from 'react/cjs/react.production.min';
-// import image from './../../public/img/download.jpg';
 
 export default function Booking(props) {
 
@@ -19,8 +18,7 @@ export default function Booking(props) {
 
         axios.get("http://localhost:8000/api/cars")
             .then(res => {
-                console.log("valid input  1233")
-                // setData(res.data);
+
                 setData(res.data.filter((val) => {
                     return val.IsBook === false
                 }))
@@ -33,7 +31,7 @@ export default function Booking(props) {
                 console.log(res.data.errors);
             })
             .catch(err => {
-                console.log("hello======")
+
                 console.log(err.data);
             })
 
@@ -70,22 +68,6 @@ export default function Booking(props) {
         var IsValid = true;
 
         console.log(book.todate);
-
-
-        // if (book.todate == "") {
-        //     console.log(book.todate);
-        //     document.getElementById("date_error").innerHTML =
-        //         " both date must be require ";
-        //     IsValid = false;
-        // }
-        // else if (book.fromdate == "") {
-        //     document.getElementById("date_error").innerHTML =
-        //         "both date must be require ";
-        //     IsValid = false;
-        // }
-        // else {
-        //     document.getElementById("date_error").innerHTML = "";
-        // }
 
         const fromdate = new Date(book.fromdate)
         const todate = new Date(book.todate)
@@ -138,37 +120,6 @@ export default function Booking(props) {
         return IsValid;
     }
 
-    //    if (!mybooking) return null;
-
-
-    // function delete_booking(booking_id) {
-
-    //     // setTimeout(cancle_booking(booking_id), 10000);
-
-
-
-    //     // setTimeout(cancle_booking(booking_id), 20000);
-
-    //     function cancle_booking(bookingid) {
-    //         window.alert("booking calcled" + bookingid)
-    //         console.log(bookingid)
-
-    //         axios.delete('http://localhost:8000/api/canclebooking/' + bookingid)
-    //             .then(res => {
-    //                 console.log("cancle after 10 second")
-
-    //                 console.log(res.data.bookingid)
-    //                 setdata( mybooking.filter( (val) => {
-    //                     return val.booking._id != res.data.bookingid
-    //                 } ) )
-    //             })
-    //             .catch(err => {
-    //                 console.log("errororr r sd delete")
-    //                 // console.log(res.data);
-    //             })
-    //     }
-
-    // }
 
 
     function booking_car(car_id, carprice) {
@@ -179,13 +130,10 @@ export default function Booking(props) {
             book.carid = car_id;
             axios.post("http://localhost:8000/api/booking", book)
                 .then(res => {
-                    console.log("valid input  1233")
-                    // delete_booking(res.data.result._id);
-
+                    alert("Congratsyou have successfully booked a car.");
                 })
                 .catch(err => {
-                    console.log("errororr r sd f")
-                    // console.log(res.data);
+                    alert(" sorry, something wrong");
                 })
         }
 
@@ -195,46 +143,32 @@ export default function Booking(props) {
 
     if (!car) return null;
 
-    console.log("car data");
-    console.log(car)
-    console.log(cardata);
+
+    // console.log(car)
+    // console.log(cardata);
 
 
     const sort_data = () => {
 
-
-
-
-
         var newArray = car;
-
         var fromlocation = document.getElementById("fromlocation_value").value;
-
-        // newArray = newArray.sort((a, b) => (a.location.toUpperCase().includes( String(fromlocation).toUpperCase())  ? -1 : 1))
-
 
         newArray = car.filter((val) => {
             return val.location.toUpperCase().includes(String(fromlocation).toUpperCase())
         })
 
-        console.log(fromlocation)
-
         var cartype = document.getElementById("select_cartype").value;
-        console.log(cartype);
         var carseats = document.getElementById("select_carseats").value;
         var cargear = document.getElementById("select_geartype").value;
         var carfuel = document.getElementById("select_carfuel").value;
         var carcompany = document.getElementById("select_carcompany").value;
         var carprice = document.getElementById("select_price").value;
-        console.log(carprice)
 
         if (carseats != "ALL") {
 
             newArray = car.filter(function (el) {
                 return el.seat == carseats;
             });
-
-            // console.log(newArray);
 
         }
         if (cartype != "ALL") {
@@ -252,7 +186,7 @@ export default function Booking(props) {
                 return el.company == carcompany;
             });
 
-            console.log(newArray);
+
 
 
         }
@@ -262,8 +196,6 @@ export default function Booking(props) {
                 return el.fuel.toUpperCase() == carfuel;
             });
 
-            console.log(newArray);
-
 
         }
 
@@ -272,8 +204,6 @@ export default function Booking(props) {
             newArray = newArray.filter(function (el) {
                 return el.gear_type.toUpperCase() == cargear;
             });
-
-            console.log(newArray);
 
 
         }
@@ -288,19 +218,13 @@ export default function Booking(props) {
             newArray.sort((a, b) => (a.cprice < b.cprice ? 1 : -1))
         }
 
-
         setData(newArray);
-
 
     }
 
     const onChange = event => {
-
-
         sort_data();
     };
-
-
 
     const updateAmount = (carprice) => {
 
@@ -310,13 +234,11 @@ export default function Booking(props) {
             var todate = new Date(book.todate)
             var fDate = fromdate.getDate() + "/ " + fromdate.getMonth() + "/ " + fromdate.getFullYear()
             var toDate = todate.getDate() + "/" + todate.getMonth() + "/" + todate.getFullYear()
-            // var todate = new Date(book.todate)
 
             const diffTime = Math.abs(todate - fromdate);
             const diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
             const diffHours = Math.floor((diffTime / (1000 * 60 * 60) - diffDay * 24));
             const diffminutes = diffTime / (1000 * 60) - diffHours * 60 - diffDay * 24 * 60;
-            console.log(diffTime / (1000 * 60))
 
             const price = Math.floor(diffDay * 24 * carprice + diffHours * carprice + diffminutes * (carprice / 60));
 
@@ -329,13 +251,6 @@ export default function Booking(props) {
 
 
 
-    // function change_view() {
-
-
-    //     console.log("chanhe")
-
-
-
     function w3_open() {
         document.getElementById("side_container").style.display = "block";
     }
@@ -344,13 +259,6 @@ export default function Booking(props) {
         document.getElementById("side_container").style.display = "none";
     }
 
-    // var x = document.getElementById("side_block");
-    // if (x.className === "side_block") {
-    //   x.className += " responsiveBooking";
-    // } else {
-    //   x.className = "side_block";
-    // }
-    //   }
 
 
     const rendercar = () => {
@@ -387,8 +295,7 @@ export default function Booking(props) {
                 var path = "http://localhost:8000/uploads/" + car.cimage;
                 var row_id = "row" + car._id;
 
-                // var pdate = new Date(car.cpurchase);
-                // console.log(pdate.getFullYear());
+
                 return (
                     <>
 
@@ -415,7 +322,7 @@ export default function Booking(props) {
 
 
                                         const confirmBox = window.confirm(
-                                            "Do you really want to Booking this Car!"
+                                            "Do you really want to Booking of " + car.company + " " + car.cname + "."
                                         )
                                         if (confirmBox === true) {
                                             booking_car(car._id, car.cprice)
@@ -425,42 +332,12 @@ export default function Booking(props) {
                         </div>
                     </>
 
-                    //         { <tr id={row_id}>
-                    //             <td>{num}</td>
-                    //             <td> <img src={path} className="avatar" alt="photo" /> </td>
-                    //             <td><a> {user.pname}</a></td>
-                    //             <td>{user.pcategory}</td>
-                    //             <td><span className="status text-success"></span>{user.price}</td>
-                    //             <td><span className="status text-success"></span>{user.discount}</td>
-                    //             <td><span className="status text-success"></span>{user.sellprice}</td>
 
-                    //             <td>
-                    //                 <a className="settings" title="Description" onClick={() => hidedescription(user._id)} ><i className="material-icons">&#xe873;</i></a>
-
-                    //             </td>
-                    //             <td>
-                    //                 <a className="delete" title="Delete" onClick={() => deleteproduct(user._id)}><span class="material-icons">&#xe872;</span></a>
-                    //             </td>
-                    //         </tr>
-
-                    //         <th></th>
-                    //         <div id={des_id} className="descri"> {user.decription}</div> }
-
-
-                    //         {/* <div className="description" id={des_id} >
-                    //   <th>Description  </th> <td> {user.decription} </td>
-                    //   </div> }
-
-                    //     </> }
                 )
             })
 
         }
     }
-
-
-
-
 
 
     return (
@@ -473,23 +350,6 @@ export default function Booking(props) {
 
                     < i class="fa fa-bars" onClick={() => w3_open()} ></i>
                 </a></span>
-
-                {/* <span id='price'><a class="icon">Charges</a></span> */}
-
-                {/* 
-                <div id='billamount'>
-
-                    
-                    <div ><h2 id="price">BillAmount</h2></div>
-
-
-
-
-
-                </div> */}
-
-
-
 
 
                 <div>
@@ -537,20 +397,7 @@ export default function Booking(props) {
 
                         <div className='booking_block'>
                             <div className='car_data'>
-                                {/* <div className='cars' >
-                                    <img src='./img/download.jpg'></img>
-                                    <div className='car_details'>
 
-                                        <span> <i class="fas fa-map-marker-alt"> </i> <h3>5 seater seadan</h3> </span>
-                                        <h2>maruti suzuki baleno</h2>
-                                        <h3>5 seater seadan</h3>
-                                        <br></br>
-                                        <br></br>
-                                        <span> <i class="fas fa-star"></i>  <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span><br></br>
-                                        <h2><span><i class="fas fa-rupee-sign"></i></span>500</h2>
-                                        <button>  Book Now </button>
-                                    </div>
-                                </div> */}
                                 {rendercar()}
 
                             </div>
@@ -630,28 +477,16 @@ export default function Booking(props) {
                                 <option value="AUTOMATIC">AUTOMATIC</option>
                             </select>
 
-
-
                         </div>
-
-
                         <div className='block11'>
 
                             <span><i>Bill Amount</i></span>
                             <div ><h2 id="price">{book.billprice}</h2></div>
 
-
-
-
-
                         </div>
-
-
-
 
                     </div>
                 </div>
-
 
             </div>
         </div>
