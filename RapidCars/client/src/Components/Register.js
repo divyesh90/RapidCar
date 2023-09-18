@@ -22,20 +22,13 @@ export default function Register() {
   });
 
   const history = useHistory();
-
   const [file, setFile] = useState(null);
-
   const handlefile = (e) => {
     setFile(e.target.files[0]);
   };
-
-
   const register = (e) => {
-
     e.preventDefault();
-
     if (validate_input(car) == true) {
-
       var Cardata = new FormData();
       Cardata.append("file", file);
       for (var key in car) {
@@ -48,21 +41,17 @@ export default function Register() {
         },
       };
 
-
-
       axios.post("http://localhost:8000/api/carregister", Cardata, config)
         .then(res => {
           history.push('/cardetails');
         })
         .catch(err => {
-
           console.log(err);
         })
     }
     else {
       console.log("invalid input");
     }
-
   }
 
   const handleChange = (e) => {
@@ -71,13 +60,11 @@ export default function Register() {
       ...car,
       [name]: value,
     });
-    console.log(car);
   };
 
 
 
   function validate_input(car) {
-    console.log("validate");
 
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var carno = /^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{1,2}\s[0-9]{4}$/;
@@ -149,29 +136,6 @@ export default function Register() {
 
   return (
     <div>
-      <link
-        href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-        rel="stylesheet"
-        id="bootstrap-css"
-      />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"></link>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"
-      />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous"
-      />
-
       <div classname="background">
         <div className="container">
           <div className="d-flex justify-content-center h-100">
@@ -181,9 +145,7 @@ export default function Register() {
               </div>
               <div className="card-body">
                 <form onSubmit={register}
-
                   enctype="multipart/form-data">
-
                   <div className="validation" id="validate_cname"></div>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
@@ -208,7 +170,6 @@ export default function Register() {
                         <i className="fas fa-building"></i>
                       </span>
                     </div>
-
                     <input
                       type="text"
                       className="form-control"
@@ -218,7 +179,6 @@ export default function Register() {
                       onChange={handleChange}
                     />
                   </div>
-
                   <div className="validation" id="validate_carno"></div>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
@@ -415,7 +375,6 @@ export default function Register() {
                   </div>
                 </form>
               </div>
-
             </div>
           </div>
         </div>

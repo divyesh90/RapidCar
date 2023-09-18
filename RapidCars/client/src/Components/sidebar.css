@@ -1,10 +1,8 @@
 
 #mySidebar{
-    align:left;
+    align-self:left;
     display: block;
     width: 25%;
     height: 20%;
     background: rgb(216, 63, 63);
-   
-
 }

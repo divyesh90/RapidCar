@@ -1,6 +1,5 @@
 
 .home_main{
-
   padding-top: 53px;
   display: block;
   background-color: rgb(247, 247, 247);
@@ -27,8 +26,6 @@
 #hero .container {
    position:relative; 
    display: block;
-  
-  
 }
 
 #hero h1 {
@@ -192,7 +189,6 @@
   color: #fff;
 }
 
-
 .breadcrumbs {
   padding: 20px 0;
   background-color: #f1f6fe;
@@ -204,8 +200,6 @@
   font-weight: 300;
   margin: 0;
 }
-
-
 
 @media (max-width: 992px) {
   .breadcrumbs h2 {
@@ -235,7 +229,6 @@
 
 @media (max-width: 768px) {
 
-
   .breadcrumbs .d-flex {
     display: block !important;
   }
@@ -246,9 +239,6 @@
     display: inline-block;
   }
 }
-
-
-
 
 section {
   padding: 60px 0;
@@ -278,7 +268,6 @@ section {
 }
 
 .section-title h3 {
-  
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
@@ -402,7 +391,6 @@ section {
     border-color: #106eea;
   }
   
-
   .counts {
     padding: 70px 0 60px;
   }
@@ -446,7 +434,6 @@ section {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
   }
-
 
   .faq {
     padding: 60px 0;
@@ -509,8 +496,6 @@ section {
     display: none;
     transition: 0.6s;
   }
-
-
 
   .contact .info-box {
     color: #444444;

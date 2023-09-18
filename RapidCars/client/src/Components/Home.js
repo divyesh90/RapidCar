@@ -6,37 +6,12 @@ export default function Home() {
     const history = useHistory();
     return (
         <div className='home_main'>
-            <link
-                href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-                rel="stylesheet"
-                id="bootstrap-css"
-            />
-            <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <link
-                rel="stylesheet"
-                href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-                integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-                crossorigin="anonymous"
-            />
-
-            <link
-                rel="stylesheet"
-                href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-                integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-                crossorigin="anonymous"
-            />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"></link>
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"></link>
-           
-
             <section id="hero" className="d-flex align-items-center">
                 <div className="container" data-aos="zoom-out" data-aos-delay="100">
                     <h1>Welcome to <span>Rapid Cars</span></h1>
                     <h2>Easy Book and Comfortable Ride</h2>
                     <div className="d-flex">
-                        <a  class="btn-get-started scrollto" onClick={ ()=>history.push('/booking')}>Get Started</a>
+                        <a class="btn-get-started scrollto" onClick={() => history.push('/booking')}>Get Started</a>
                     </div>
                 </div>
             </section>
@@ -84,7 +59,6 @@ export default function Home() {
                 </div>
             </section>
 
-
             <section id="about" className="about section-bg">
                 <div className="container" data-aos="fade-up">
 
@@ -106,13 +80,12 @@ export default function Home() {
                             </p>
                             <ul>
                                 <li>
-                                <i class='fas fa-car'></i>
+                                    <i class='fas fa-car'></i>
                                     <div>
                                         <h5>Car booking done easily</h5>
                                         <p>Booking will be done within couple minutes in our website and after done a confirmation mail is send to the customer.</p>
                                     </div>
                                 </li>
-                                
                             </ul>
                             <p>
                                 Rapid Cars Always give more choices the customers and we always do
@@ -126,9 +99,7 @@ export default function Home() {
 
             <section id="counts" className="counts">
                 <div className="container" data-aos="fade-up">
-
                     <div className="row">
-
                         <div className="col-lg-3 col-md-6">
                             <div className="count-box">
                                 <i className="bi bi-emoji-smile"></i>
@@ -159,15 +130,12 @@ export default function Home() {
                                 <p>Hard Workers</p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
             <section id="services" className="services">
                 <div className="container" data-aos="fade-up">
-
                     <div className="section-title">
                         <h2>Services</h2>
                         <h3>Check our <span>Service</span></h3>
@@ -222,13 +190,9 @@ export default function Home() {
                                 <p>You can cancel booking within 48 hr of booking but after that charged will be applied.</p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
-
-
 
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
@@ -263,19 +227,15 @@ export default function Home() {
                                 <p>+91 9999888899</p>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
             </section>
             <footer id="footer">
-
-
-
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
-                       
+
                             <div class="col-lg-3 col-md-6 footer-contact">
                                 <h3>Rapid Cars<span>.</span></h3>
                                 <p>A108 Near GEB <br></br>Naroda, Ahmedabad <br></br>330081 Gujrat, India<br /><br /><strong>Phone:</strong> +1 9999 8888 99<br /><strong>Email:</strong> rapidcar123@.com<br /></p>
@@ -314,12 +274,10 @@ export default function Home() {
                                     <a href="#" className="linkedin"><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
-
     )
 }

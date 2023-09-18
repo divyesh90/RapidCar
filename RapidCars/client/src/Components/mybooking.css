@@ -91,9 +91,7 @@
     border-radius: 4px;
 }
    
-
 #total_bill{
-
     margin-top: 10px; 
     border-radius: 1px;
     border: none;
@@ -106,8 +104,6 @@
     border-radius: 4px;
     color: #0f73ee;
     font-family: Arial, sans-serif;
-
-   
 }
 
 
@@ -118,8 +114,7 @@
         border: 1px solid #0f73ee;
         padding: 10px;
         margin-bottom: 10px;
-        height: 500px;
-        
+        height: 500px; 
     }
 
     #total_bill{
@@ -136,11 +131,7 @@
         border-radius: 4px;
         color: #0f73ee;
         font-family: Arial, sans-serif;
-    
-       
     }
-
-    
 
     .mybooking_containar .mybooking_block{
         margin-top: 20px;
@@ -154,9 +145,5 @@
         border: 1px solid #e0e0e0;
         box-shadow: 0px 0px 1px 1px #e0e0e0;
         font-size: 12px;
-     
     }
-    
-    
   } 
-  

@@ -6,7 +6,6 @@
     background-color: rgb(240, 239, 239);
     width: 100%;
     display: block;
-
     float: right;
 }
 
@@ -17,7 +16,6 @@
     background-color: #f5f5f5;
     float: left;
     overflow: scroll;
-
 }
 
 .responsive {
@@ -27,7 +25,6 @@
     background-color: #da2d2d;
     float: left;
     overflow: scroll;
-
 }
 
 .side_containar .side_block {
@@ -42,7 +39,6 @@
     border: 1px solid #e0e0e0;
     box-shadow: 0px 0px 1px 1px #e0e0e0;
     font-size: 12px;
-
 }
 
 .side_containar .side_block .block select {
@@ -53,7 +49,6 @@
     justify-content: space-around;
     margin-bottom: 10px;
     font-family: Arial, sans-serif;
-    ;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 4px;
@@ -62,18 +57,12 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 3px;
-
-
-
 }
 
 .side_containar .side_block h4 {
-
     color: cadetblue;
     margin: 5px;
-
 }
-
 
 .side_containar .side_block .block {
     border-radius: 4px;
@@ -84,7 +73,6 @@
 }
 
 .side_containar .side_block .block {
-
     color: #000000;
     font-weight: 510;
     margin-right: 10px;
@@ -102,7 +90,6 @@
 }
 
 .side_containar .side_block .block11 {
-
     color: #000000;
     font-weight: 550;
     margin-right: 10px;
@@ -112,11 +99,9 @@
 }
 
 .side_containar .side_block .block11 #price {
-
     color: #0f73ee;
     font-weight: 550;
     margin-left: 30%;
-
     font-size: 18px;
     font-family: Arial, sans-serif;
 }
@@ -129,18 +114,14 @@
 }
 
 .side_containar .side_block .location span {
-
-
     color: #0f73ee;
     display: inline;
     margin-right: 10px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .side_containar .side_block .location input {
-
     background: #f5f5f5;
     padding: 4px;
     justify-content: space-around;
@@ -151,38 +132,29 @@
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     width: 85%;
-
-
 }
 
 .top_block .date input {
-
     background: #f5f5f5;
     padding: 4px;
     justify-content: space-around;
     margin-bottom: 10px;
     font-family: Arial, sans-serif;
-    ;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     width: 30%;
-
-
 }
 
 .top_block h4 {
-
     color: cadetblue;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 35px;
-
 }
 
 .top_block h5 {
-
     color: rgb(226, 76, 76);
     margin-top: 2px;
     margin-bottom: 3px;
@@ -192,27 +164,22 @@
     border-radius: 4px;
     border: 1px solid #0f73ee;
     padding: 5px;
-
     margin-bottom: 10px;
 }
 
 .top_block .date span {
-
     color: #0f73ee;
     display: inline;
     margin-right: 10px;
     font-size: 15px;
-
 }
 
 .top_block a {
-
     color: #0f73ee;
     display: inline;
     margin-right: 5%;
     margin-left: 5%;
     font-size: 15px;
-
 }
 
 .top_block .location {
@@ -223,17 +190,13 @@
 }
 
 .top_block .location span {
-
-
     color: #0f73ee;
     display: inline;
     margin-right: 10px;
     font-size: 15px;
-
 }
 
 .top_block .location input {
-
     background: #f5f5f5;
     padding: 4px;
     justify-content: space-around;
@@ -244,8 +207,6 @@
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     width: 30%;
-
-
 }
 
 .top_block {
@@ -254,12 +215,10 @@
 }
 
 .booking_containar {
-
     width: 70%;
     height: 100%;
     float: right;
     background-color: rgb(223, 221, 221);
-    ;
 }
 
 .booking_containar .booking_block {
@@ -274,7 +233,6 @@
     border: 1px solid #e0e0e0;
     box-shadow: 0px 0px 1px 1px #e0e0e0;
     font-size: 12px;
-
 }
 
 .booking_containar .booking_block .car_data .cars {
@@ -293,13 +251,9 @@
     margin-top: 30px;
     margin-bottom: auto;
     float: left;
-
-
 }
 
 .booking_containar .booking_block .car_data .cars .car_details {
-
-
     margin-left: auto;
     margin-right: 10%;
     padding: 10px;
@@ -309,27 +263,22 @@
 }
 
 .booking_containar .booking_block .car_data .cars .car_details h2 {
-
     color: #1f1f1f;
     padding: 0;
     margin: 8px 0 2px;
     font-weight: 520;
     font-size: 15px;
-
 }
 
 .booking_containar .booking_block .car_data .cars .car_details .carnotfound h2 {
-
     color: #0f73ee;
     padding-top: 60px;
     margin: 8px 0 2px;
     font-weight: 520;
     font-size: 18px;
-
 }
 
 .booking_containar .booking_block .car_data .cars .car_details span {
-
     color: #0f73ee;
     display: inline;
     margin-right: 5px;
@@ -359,19 +308,13 @@
 }
 
 #view-button {
-
     display: none;
-
 }
-
 #close-button {
     display: none;
 }
 
-
 @media screen and (max-width: 600px) {
-
-
     .booking_containar .booking_block .car_data .cars {
         border-radius: 4px;
         border: 1px solid #0f73ee;
@@ -379,7 +322,6 @@
         margin-bottom: 10px;
         height: 350px;
     }
-
     .booking_containar .booking_block .car_data .cars .car_details {
         margin-left: auto;
         margin-right: 20%;
@@ -403,8 +345,6 @@
         margin-top: 10px;
         background-color: #0f73ee;
         margin-right: 4px;
-
-
     }
 
 
@@ -412,7 +352,6 @@
         font-size: 12px;
         color: #ffffff;
         display: flex;
-
         padding-left: 5px;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -423,8 +362,6 @@
         margin-top: 98%;
         background-color: #0f73ee;
         margin-right: 4px;
-
-
     }
 
     #close-button {
@@ -436,7 +373,6 @@
         background-color: #f5f5f5;
         margin-left: 90%;
         margin-bottom: 5px;
-
     }
 
     .side_containar {
@@ -447,12 +383,10 @@
         overflow: scroll;
         background-color: #f5f5f5;
         float: left;
-
     }
 
     .side_containar .responsiveBooking {
         display: none;
-
     }
 
     .booking_containar {
@@ -462,9 +396,6 @@
         display: block;
         float: left;
         background-color: rgb(223, 221, 221);
-        ;
-
-
     }
 
     .top_block a {
@@ -514,7 +445,6 @@
         border: 1px solid #e0e0e0;
         box-shadow: 0px 0px 1px 1px #e0e0e0;
         font-size: 12px;
-
     }
 
     .booking_containar .booking_block .car_data .cars img {
@@ -525,5 +455,4 @@
         margin-top: auto;
         margin-bottom: auto;
     }
-
 }

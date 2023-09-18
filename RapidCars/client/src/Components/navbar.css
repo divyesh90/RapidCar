@@ -64,7 +64,6 @@ body {
   color: aqua
 }
 
-
 .center {
   display: block;
   margin-left: auto;
@@ -72,9 +71,7 @@ body {
   width: 50%;
 }
 
-
 @media screen and (max-width: 600px) {
-
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -85,7 +82,6 @@ body {
   }
 
   .topnav.responsive {
-
     width: 100%;
     overflow: hidden;
     padding-right: 0px;
@@ -105,7 +101,6 @@ body {
   }
 
   .logo {
-
     margin-left: 4vw;
     float: left;
     width: 24vw;

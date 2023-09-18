@@ -22,12 +22,9 @@ export default function CarsDetails() {
 
     }, []);
 
-
     if (!cardetails) return null;
-
     const booking_car_sort = (isbook) => {
         console.log("in booking" + isbook)
-
         if (isbook == true) {
             var el = document.getElementById("reserve")
             el.style.color = "white";
@@ -37,9 +34,7 @@ export default function CarsDetails() {
             var el = document.getElementById("reserve")
             el.style.color = "#299be4";
             el.style.background = "#f5f5f5";
-
         }
-
         if (isbook == false) {
             var el = document.getElementById("unreserve")
             el.style.color = "white";
@@ -49,52 +44,35 @@ export default function CarsDetails() {
             var el = document.getElementById("unreserve")
             el.style.color = "#299be4";
             el.style.background = "#f5f5f5";
-
         }
-
         if (isbook == "all") {
             setcar(cardetails)
-
             var el = document.getElementById("all")
             el.style.color = "white";
             el.style.background = "#299be4";
         }
         else {
-
             setcar(cardetails.filter((val) => {
                 return val.IsBook === isbook
             }))
-
             var el = document.getElementById("all")
             el.style.color = "#299be4";
             el.style.background = "#f5f5f5";
         }
-
     }
 
-
     function RemoveCar(carid) {
-
-
         axios.delete('http://localhost:8000/api/removecar/' + carid)
             .then(res => {
-
-
-                console.log(res.data.carid)
                 setcar(cardetails.filter((val) => {
                     return val._id != res.data.carid
                 }))
             })
             .catch(err => {
-                console.log("error delete")
+                console.log("Something Went Wrong")
             })
     }
-
-
-
-
     function rendercar() {
-
         var num = 0;
         return cars.map(car => {
             num++;
@@ -105,7 +83,6 @@ export default function CarsDetails() {
 
             if (car.IsBook == false) {
                 var html = <a className="delete" title="Delete" data-toggle="tooltip" onClick={() => {
-
                     const confirmBox = window.confirm(
                         "Do you really want to Remove!  " + car.cname
                     )
@@ -131,27 +108,21 @@ export default function CarsDetails() {
                         <td><span className="status text-success"></span>{car.fuel}</td>
                         <td><span className="status text-success"></span>{car.gear_type}</td>
                         <td><span className="status text-success"></span>{car.mileage}</td>
-
                     </tr>
                 </>
             )
         })
     }
 
-
-
     return (
 
         <div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-
             <div className="p_main">
                 <div className="container">
-
                     <div className="table-responsive">
                         <div className="table-wrapper">
                             <div className="table-title">
-
                                 <div className="row">
                                     <div className="column">
                                         <h2>Car <b>Details</b></h2>
@@ -162,10 +133,7 @@ export default function CarsDetails() {
                                             <div class="button" > <button id="unreserve" onClick={() => booking_car_sort(false)}>Unreserved</button></div>
                                             <div class="button" > <button id="all" onClick={() => booking_car_sort("all")}>All Car</button></div>
                                         </div>
-
                                     </div>
-
-
                                 </div>
                             </div>
                             <table className="table table-striped table-hover">
@@ -190,10 +158,8 @@ export default function CarsDetails() {
                                     {rendercar()}
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
-
                 </div >
             </div>
         </div>

@@ -3,8 +3,6 @@ import React from 'react'
 import './sidebar.css'
 export default function Sidebar() {
 
-
-
     function sidebar_open() {
         document.getElementById("booking_main").style.marginLeft = "25%";
         document.getElementById("mySidebar").style.width = "25%";
@@ -19,9 +17,7 @@ export default function Sidebar() {
 
     return (
         <div>
-
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-
             <button id='openSidebar' onClick={() => sidebar_open()}><i class="fa fa-bars"></i></button>
                 <div className='sidebar'   id='mySidebar'>
                 <h1>helo</h1>
@@ -30,6 +26,5 @@ export default function Sidebar() {
                 <h1>helo </h1>
            </div>
         </div>
-
     )
 }

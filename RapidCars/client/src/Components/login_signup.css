@@ -11,19 +11,13 @@ body {
   font-family: "Numans", sans-serif;
 } 
 
-
-
-
 .container {
-
   height: 100%; 
   width: fit-content;
   align-content: center;
- 
 }
 
 .card {
-  
   height: fit-content;
   margin-top: 80px;
   margin-bottom: auto;
@@ -67,7 +61,6 @@ body {
 
 .validation {
 color: rgb(247, 243, 243);
-
 font-size: 14px;
 }
 
@@ -122,10 +115,7 @@ input:focus {
   display: none;
 }
 
-
-
  @media only screen and (max-width: 455px) {
-  
   html,body {
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,14 +123,11 @@ input:focus {
   width: 100%;
   font-family: "Numans", sans-serif;
 }
-
     .container {
      height: auto;
     width: auto;
     align-content: center !important;
     }
-  
-
 
   .card {
     height: fit-content;
@@ -150,5 +137,3 @@ input:focus {
     background-color: rgba(0, 0, 0, 0.445) !important;
   }
 } 
-
-

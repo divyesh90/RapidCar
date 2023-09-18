@@ -1,44 +1,28 @@
 import React from 'react'
 import './booking.css'
 import axios from 'axios';
-
-import { useHistory } from 'react-router-dom';
-
-import { useState } from 'react/cjs/react.production.min';
+import { useHistory, useState } from 'react-router-dom';
 
 export default function Booking(props) {
-
     const history = useHistory();
-
     const [cardata, setData] = React.useState(null);
     const [car, setcar] = React.useState(null);
 
-
     React.useEffect(() => {
-
         axios.get("http://localhost:8000/api/cars")
             .then(res => {
-
                 setData(res.data.filter((val) => {
-                    return val.IsBook === false
+                    return val.IsBook === false;
                 }))
 
                 setcar(res.data.filter((val) => {
-                    return val.IsBook === false
+                    return val.IsBook === false;
                 }))
-
-
-                console.log(res.data.errors);
             })
             .catch(err => {
-
-                console.log(err.data);
+                console.log("Someting Went Wrong");
             })
-
-
     }, []);
-
-
 
     const [book, setbook] = React.useState({
         todate: "",
@@ -49,9 +33,7 @@ export default function Booking(props) {
         userid: props.user_id,
         billamount: "",
         hours: "",
-
     });
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -59,46 +41,35 @@ export default function Booking(props) {
             ...book,
             [name]: value,
         });
-        console.log(book);
         sort_data();
     };
-
 
     function validate_input(car) {
         var IsValid = true;
 
-        console.log(book.todate);
-
-        const fromdate = new Date(book.fromdate)
-        const todate = new Date(book.todate)
-        const diff = todate - fromdate
-
-        const valid_fromdate = fromdate - new Date()
+        const fromdate = new Date(book.fromdate);
+        const todate = new Date(book.todate);
+        const diff = todate - fromdate;
+        const valid_fromdate = fromdate - new Date();
 
         if (book.todate == "") {
-            console.log(book.todate);
-            document.getElementById("date_error").innerHTML =
-                " both date must be require ";
+            document.getElementById("date_error").innerHTML = "both date must be require";
             IsValid = false;
         }
         else if (book.fromdate == "") {
-            document.getElementById("date_error").innerHTML =
-                "both date must be require ";
+            document.getElementById("date_error").innerHTML = "both date must be require";
             IsValid = false;
         }
         else if (fromdate < new Date()) {
-            document.getElementById("date_error").innerHTML =
-                " please check from date ";
+            document.getElementById("date_error").innerHTML ="please check from date";
             IsValid = false;
         }
         else if (diff < 0 || valid_fromdate < 0) {
-            document.getElementById("date_error").innerHTML =
-                " please check from date ";
+            document.getElementById("date_error").innerHTML = "please check from date";
             IsValid = false;
         } else {
             document.getElementById("date_error").innerHTML = "";
         }
-
 
         if (book.fromlocation < 3 || book.fromlocation == "") {
             document.getElementById("location_error").innerHTML =
@@ -107,7 +78,6 @@ export default function Booking(props) {
         } else {
             document.getElementById("location_error").innerHTML = "";
         }
-
         if (book.tolocation < 3 || book.tolocation == "") {
             document.getElementById("location_error").innerHTML =
                 "both location must be requird";
@@ -115,17 +85,11 @@ export default function Booking(props) {
         } else {
             document.getElementById("location_error").innerHTML = "";
         }
-
-
         return IsValid;
     }
 
-
-
     function booking_car(car_id, carprice) {
-
         updateAmount(carprice)
-
         if (validate_input() == true) {
             book.carid = car_id;
             axios.post("http://localhost:8000/api/booking", book)
@@ -136,23 +100,12 @@ export default function Booking(props) {
                     alert(" sorry, something wrong");
                 })
         }
-
-
-
     }
 
     if (!car) return null;
-
-
-    // console.log(car)
-    // console.log(cardata);
-
-
     const sort_data = () => {
-
         var newArray = car;
         var fromlocation = document.getElementById("fromlocation_value").value;
-
         newArray = car.filter((val) => {
             return val.location.toUpperCase().includes(String(fromlocation).toUpperCase())
         })
@@ -165,61 +118,37 @@ export default function Booking(props) {
         var carprice = document.getElementById("select_price").value;
 
         if (carseats != "ALL") {
-
             newArray = car.filter(function (el) {
                 return el.seat == carseats;
             });
-
         }
         if (cartype != "ALL") {
-
             newArray = newArray.filter(function (el) {
                 return el.cartype == cartype;
             });
-
-
-
         }
         if (carcompany != "ALL") {
-
             newArray = newArray.filter(function (el) {
                 return el.company == carcompany;
             });
-
-
-
-
         }
         if (carfuel != "ALL") {
-
             newArray = newArray.filter(function (el) {
                 return el.fuel.toUpperCase() == carfuel;
             });
-
-
         }
-
         if (cargear != "ALL") {
-
             newArray = newArray.filter(function (el) {
                 return el.gear_type.toUpperCase() == cargear;
             });
-
-
         }
         if (carprice == "LTOH") {
-
             newArray.sort((a, b) => (a.cprice > b.cprice ? 1 : -1))
-
-
         }
         if (carprice == "HTOL") {
-
             newArray.sort((a, b) => (a.cprice < b.cprice ? 1 : -1))
         }
-
         setData(newArray);
-
     }
 
     const onChange = event => {
@@ -227,78 +156,48 @@ export default function Booking(props) {
     };
 
     const updateAmount = (carprice) => {
-
         if (validate_input() == true) {
-
             var fromdate = new Date(book.fromdate)
             var todate = new Date(book.todate)
             var fDate = fromdate.getDate() + "/ " + fromdate.getMonth() + "/ " + fromdate.getFullYear()
             var toDate = todate.getDate() + "/" + todate.getMonth() + "/" + todate.getFullYear()
-
             const diffTime = Math.abs(todate - fromdate);
             const diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
             const diffHours = Math.floor((diffTime / (1000 * 60 * 60) - diffDay * 24));
             const diffminutes = diffTime / (1000 * 60) - diffHours * 60 - diffDay * 24 * 60;
-
             const price = Math.floor(diffDay * 24 * carprice + diffHours * carprice + diffminutes * (carprice / 60));
-
             book.billamount = price
             book.hours = diffDay + " : " + diffHours + " : " + diffminutes;
-
             document.getElementById('price').innerHTML = "₹ " + price
         }
     }
 
-
-
     function w3_open() {
         document.getElementById("side_container").style.display = "block";
     }
-
     function w3_close() {
         document.getElementById("side_container").style.display = "none";
     }
-
-
 
     const rendercar = () => {
         var num = 0;
 
         if (cardata.length == 0) {
-
             return (<div className='cars' >
-
                 <div className='car_details'>
-
                     <div className='carnotfound'>
-
                         <h2> Sorry ! no cars are available for selected choice/s</h2>
                     </div>
-
-
                 </div>
             </div>)
-
-
-
         }
-
         else {
-
-
-
-
             return cardata.map(car => {
-
                 num++;
-
                 var path = "http://localhost:8000/uploads/" + car.cimage;
                 var row_id = "row" + car._id;
-
-
                 return (
                     <>
-
                         <div className='cars' onClick={() => updateAmount(car.cprice)} id={row_id} >
                             <img src={path}></img>
                             <div className='car_details'>
@@ -317,10 +216,7 @@ export default function Booking(props) {
                                 <br></br>
                                 <h2><span><i class="fas fa-rupee-sign"></i></span>{car.cprice} /Hours</h2>
                                 <button name="carid" value={car._id}
-
                                     onClick={() => {
-
-
                                         const confirmBox = window.confirm(
                                             "Do you really want to Booking of " + car.company + " " + car.cname + "."
                                         )
@@ -331,53 +227,34 @@ export default function Booking(props) {
                             </div>
                         </div>
                     </>
-
-
                 )
             })
-
         }
     }
 
-
     return (
-
-
         <div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <div id='booking_main' >
                 <span id='view-button'><a class="icon">
-
                     < i class="fa fa-bars" onClick={() => w3_open()} ></i>
                 </a></span>
-
-
                 <div>
-
                     <div className='booking_containar'>
-
                         <div className='top_block'>
                             <div className='date'>
-
                                 <h4>Date & Time </h4>
-
                                 <h5 id="date_error"></h5>
                                 <span><i class="far fa-clock"></i></span>
-
                                 <input id="fromdate" type="datetime-local" placeholder='start date' required name="fromdate"
                                     value={book.fromdate} onChange={handleChange}
                                 ></input>
-
                                 <a>To</a>
                                 <span><i class="far fa-clock"></i></span>
                                 <input type="datetime-local" placeholder='end date' required name="todate"
                                     value={book.todate} onChange={handleChange}
                                 >
-
                                 </input>
-
-
-
                             </div>
                             <div className='location'>
                                 <h4>Select Your Location</h4>
@@ -394,27 +271,19 @@ export default function Booking(props) {
                                 ></input>
                             </div>
                         </div>
-
                         <div className='booking_block'>
                             <div className='car_data'>
-
                                 {rendercar()}
-
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div className='side_containar' id="side_container">
-
                     <span id='close-button'><a class="icon">
-
                         <i class="fa fa-close" onClick={() => w3_close()} ></i>
                     </a></span>
-
                     <div className='side_block' id="side_block">
-
                         <div className='block'>
                             <span><i>Company</i></span>
                             <select
@@ -426,8 +295,8 @@ export default function Booking(props) {
                                 <option value="Suzuki">Suzuki</option>
                                 <option value="Mahindra">Mahindra</option>
                             </select>
-                            <span><i>Price:</i></span>
 
+                            <span><i>Price:</i></span>
                             <select
                                 id="select_price"
                                 onChange={onChange}
@@ -484,12 +353,9 @@ export default function Booking(props) {
                             <div ><h2 id="price">{book.billprice}</h2></div>
 
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
-
     )
 }

@@ -6,7 +6,6 @@ import './CarsDetails.css'
 export default function BookingCars() {
 
     const history = useHistory();
-
     const [booking, setbooking] = React.useState(null);
     const [bookingcar, setData] = React.useState(null);
 
@@ -14,12 +13,11 @@ export default function BookingCars() {
 
         axios.post("http://localhost:8000/api/systembookingdata")
             .then(res => {
-                console.log(res.data)
-                setbooking(res.data)
+                setbooking(res.data);
                 setData(res.data);
             })
             .catch(err => {
-                console.log("error")
+                console.log("Something went wrong");
             })
     }, []);
 
@@ -27,7 +25,6 @@ export default function BookingCars() {
 
     const booking_history_sort = (isbook) => {
         console.log("in booking" + isbook)
-
         if (isbook == true) {
             var el = document.getElementById("reserve")
             el.style.color = "white";
@@ -61,16 +58,13 @@ export default function BookingCars() {
             setbooking(bookingcar.filter((val) => {
                 return val.booking.IsRuning === isbook
             }))
-
             var el = document.getElementById("all")
             el.style.color = "#299be4";
             el.style.background = "#f5f5f5";
         }
-
     }
 
     function BookingComplete(carid) {
-
         axios.put("http://localhost:8000/api/bookingcomplete/" + carid)
             .then(res => {
                 console.log(res.data)
@@ -82,15 +76,12 @@ export default function BookingCars() {
     }
 
     if (!bookingcar) return null;
-
     function rendercar() {
-
         var num = 0;
         booking.sort((a, b) => (new Date(a.booking.todate) < new Date(b.booking.todate) ? 1 : -1))
         booking.sort((a, b) => (a.booking.IsRuning != true ? 1 : -1))
 
         return booking.map(booking => {
-
             num++;
             var html
             var path = "http://localhost:8000/uploads/" + booking.car.cimage;
@@ -106,8 +97,6 @@ export default function BookingCars() {
                 var html = <a className="delete" title="Delete" data-toggle="tooltip" onClick={() => BookingComplete(booking.booking._id)}>
                     <i class="fa fa-trash"></i></a>
             }
-
-
             return (
                 <>
                     <tr>
@@ -124,38 +113,22 @@ export default function BookingCars() {
                         <td><span className="status text-success"></span>{toDate}</td>
                         <td><span className="status text-success"></span>{booking.booking.BillAmount}</td>
                         <td><span className="status text-success"></span>{booking.booking.Hours}</td>
-
                         <td>
                             {html}
                         </td>
                     </tr>
-
                 </>
             )
         })
-
-
     }
-
-
-
     return (
-
         <div>
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-
             <div className="p_main">
                 <div className="container">
                     <div className="table-responsive">
-
                         <div className="table-wrapper">
                             <div className="table-title">
-
                                 <div className="row">
-
                                     <div className="row">
                                         <div className="column">
                                             <h2>Car <b>Details</b></h2>
@@ -166,12 +139,8 @@ export default function BookingCars() {
                                                 <div class="button" > <button id="unreserve" onClick={() => booking_history_sort(false)}>History</button></div>
                                                 <div class="button" > <button id="all" onClick={() => booking_history_sort("all")}>All Car</button></div>
                                             </div>
-
                                         </div>
-
-
                                     </div>
-
                                 </div>
                             </div>
                             <table className="table table-striped table-hover">
@@ -196,10 +165,8 @@ export default function BookingCars() {
                                     {rendercar()}
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
-
                 </div >
             </div>
         </div>

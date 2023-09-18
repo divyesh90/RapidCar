@@ -15,27 +15,21 @@ const history = useHistory()
     }
   }
 
-  function redirect(){
-     
+  function redirect() {
     var auth = document.getElementById('logout').innerHTML;
-    console.log(auth)
-    document.getElementById("remove-button").innerHTML = ""
+    document.getElementById("remove-button").innerHTML = "";
     if(auth == "Login")
         history.push('/login');
     else{
-      window.localStorage.setItem('user_login', 'No')
-      window.localStorage.removeItem('user')
+      window.localStorage.setItem('user_login', 'No');
+      window.localStorage.removeItem('user');
       props.setloginuser({});
       history.push('/');
     }
-       
   }
-
 
   return (
     <div>
-
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
       <div class="topnav" id="myTopnav">
         <img src="./rapido-final-logo.png" class="logo" />
         <a> </a>
@@ -44,14 +38,11 @@ const history = useHistory()
         <Link to="/cardetails">Cars</Link>
         <Link to="/bookingcars">Booked car</Link>
         <Link id='logout' onClick={() => redirect()} >{props.login}</Link>
-        
         <span><a class="icon" onClick={() => myFunction()}>
           < i class="fa fa-bars" id='remove-button'></i>
         </a></span>
         <span><a href="#a"><i class="fas fa-user"></i>{props.uname}</a></span>
-        
       </div>
     </div>
   )
-
 }
