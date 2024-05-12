@@ -4,9 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
-
 export default function Register() {
-
   const [car, setcar] = useState({
     cname: "",
     location: "",
@@ -41,18 +39,18 @@ export default function Register() {
         },
       };
 
-      axios.post("http://localhost:8000/api/carregister", Cardata, config)
-        .then(res => {
-          history.push('/cardetails');
+      axios
+        .post("http://localhost:8000/api/carregister", Cardata, config)
+        .then((res) => {
+          history.push("/cardetails");
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
-        })
-    }
-    else {
+        });
+    } else {
       console.log("invalid input");
     }
-  }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,10 +60,7 @@ export default function Register() {
     });
   };
 
-
-
   function validate_input(car) {
-
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var carno = /^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{1,2}\s[0-9]{4}$/;
     var IsValid = true;
@@ -144,8 +139,7 @@ export default function Register() {
                 <h3 className="">Car Register</h3>
               </div>
               <div className="card-body">
-                <form onSubmit={register}
-                  enctype="multipart/form-data">
+                <form onSubmit={register} enctype="multipart/form-data">
                   <div className="validation" id="validate_cname"></div>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
@@ -251,7 +245,6 @@ export default function Register() {
                     />
                   </div>
 
-
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
@@ -270,12 +263,10 @@ export default function Register() {
                     </select>
                   </div>
 
-
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
                         <i class="fa-solid fa-gas-pump"></i>
-
                       </span>
                     </div>
                     <select
@@ -290,7 +281,6 @@ export default function Register() {
                       <option value="CNG">CNG</option>
                     </select>
                   </div>
-
 
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
@@ -307,7 +297,6 @@ export default function Register() {
                     >
                       <option value="MANUAL">MANUAL</option>
                       <option value="AUTO">AUTO</option>
-
                     </select>
                   </div>
 
@@ -361,7 +350,6 @@ export default function Register() {
                       placeholder="Upload image"
                       value={car.file}
                       onChange={handlefile}
-
                     />
                   </div>
 
@@ -371,7 +359,9 @@ export default function Register() {
                       value="Register"
                       placeholder="Submit"
                       className="btn float-right login_btn"
-                    >Submit</button>
+                    >
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

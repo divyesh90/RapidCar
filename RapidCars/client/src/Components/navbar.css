@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Verdana, Helvetica, sans-serif;
-
 }
 
 .topnav {
@@ -11,12 +10,10 @@ body {
   padding-right: 20px;
   background-color: #0f73ee;
   z-index: 9999;
-
 }
 
 .topnav span {
   float: right;
-
 }
 
 .topnav span i {
@@ -31,7 +28,6 @@ body {
   padding: 16px 16px;
   text-decoration: none;
   font-size: 18px;
-
 }
 
 .card-body .form-group submit {
@@ -49,7 +45,6 @@ body {
   margin-bottom: 3px;
 }
 
-
 .topnav .active {
   border-radius: 3px;
   background: #0f73eee7;
@@ -61,7 +56,7 @@ body {
 }
 
 .topnav Link {
-  color: aqua
+  color: aqua;
 }
 
 .center {
@@ -104,7 +99,6 @@ body {
     margin-left: 4vw;
     float: left;
     width: 24vw;
-    height: 10vw
+    height: 10vw;
   }
-
 }

@@ -1,140 +1,409 @@
 @import url("https://fonts.googleapis.com/css?family=Numans");
 
 #booking_main {
-    margin-top: 53PX;
-    height: 100%;
-    background-color: rgb(240, 239, 239);
-    width: 100%;
-    display: block;
-    float: right;
+  margin-top: 53px;
+  height: 100%;
+  background-color: rgb(240, 239, 239);
+  width: 100%;
+  display: block;
+  float: right;
 }
 
 .side_containar {
-    position: fixed;
-    width: 30%;
-    height: 100%;
-    background-color: #f5f5f5;
-    float: left;
-    overflow: scroll;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  background-color: #f5f5f5;
+  float: left;
+  overflow: scroll;
 }
 
 .responsive {
-    position: fixed;
-    width: 30%;
-    height: 100%;
-    background-color: #da2d2d;
-    float: left;
-    overflow: scroll;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  background-color: #da2d2d;
+  float: left;
+  overflow: scroll;
 }
 
 .side_containar .side_block {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0px 0px 1px 1px #e0e0e0;
-    font-size: 12px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  font-size: 12px;
 }
 
 .side_containar .side_block .block select {
-
-    background: #f5f5f5;
-    padding: 4px;
-    font-size: 16px;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
-    align-items: center;
-    flex-wrap: wrap;
-    border-radius: 4px;
-    border: 1px solid #e0e0e0;
-    width: 85%;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 3px;
+  background: #f5f5f5;
+  padding: 4px;
+  font-size: 16px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  width: 85%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
 }
 
 .side_containar .side_block h4 {
-    color: cadetblue;
-    margin: 5px;
+  color: cadetblue;
+  margin: 5px;
 }
 
 .side_containar .side_block .block {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
 }
 
 .side_containar .side_block .block {
-    color: #000000;
-    font-weight: 510;
-    margin-right: 10px;
-    font-size: 14px;
-    margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-weight: 510;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .side_containar .side_block .block11 {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
 }
 
 .side_containar .side_block .block11 {
-    color: #000000;
-    font-weight: 550;
-    margin-right: 10px;
-    font-size: 16px;
-    margin-left: 10px;
-    font-family: Arial, sans-serif;
+  color: #000000;
+  font-weight: 550;
+  margin-right: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: Arial, sans-serif;
 }
 
 .side_containar .side_block .block11 #price {
-    color: #0f73ee;
-    font-weight: 550;
-    margin-left: 30%;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
+  color: #0f73ee;
+  font-weight: 550;
+  margin-left: 30%;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
 }
 
 .side_containar .side_block .location {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 5px;
-    margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 .side_containar .side_block .location span {
-    color: #0f73ee;
-    display: inline;
-    margin-right: 10px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #0f73ee;
+  display: inline;
+  margin-right: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .side_containar .side_block .location input {
-    background: #f5f5f5;
-    padding: 4px;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    align-items: center;
-    flex-wrap: wrap;
-    border-radius: 4px;
-    border: 1px solid #e0e0e0;
-    width: 85%;
+  background: #f5f5f5;
+  padding: 4px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  width: 85%;
 }
 
 .top_block .date input {
+  background: #f5f5f5;
+  padding: 4px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  width: 30%;
+}
+
+.top_block h4 {
+  color: cadetblue;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 35px;
+}
+
+.top_block h5 {
+  color: rgb(226, 76, 76);
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+.top_block .date {
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.top_block .date span {
+  color: #0f73ee;
+  display: inline;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.top_block a {
+  color: #0f73ee;
+  display: inline;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+.top_block .location {
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.top_block .location span {
+  color: #0f73ee;
+  display: inline;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.top_block .location input {
+  background: #f5f5f5;
+  padding: 4px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  width: 30%;
+}
+
+.top_block {
+  background-color: white;
+  padding: 20px;
+}
+
+.booking_containar {
+  width: 70%;
+  height: 100%;
+  float: right;
+  background-color: rgb(223, 221, 221);
+}
+
+.booking_containar .booking_block {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: auto;
+  background-color: white;
+  padding: 22px 20px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  font-size: 12px;
+}
+
+.booking_containar .booking_block .car_data .cars {
+  border-radius: 4px;
+  border: 1px solid #0f73ee;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 220px;
+  justify-content: center;
+}
+
+.booking_containar .booking_block .car_data .cars img {
+  width: 274px;
+  height: 154px;
+  margin-top: 30px;
+  margin-bottom: auto;
+  float: left;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details {
+  margin-left: auto;
+  margin-right: 10%;
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  float: right;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details h2 {
+  color: #1f1f1f;
+  padding: 0;
+  margin: 8px 0 2px;
+  font-weight: 520;
+  font-size: 15px;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details .carnotfound h2 {
+  color: #0f73ee;
+  padding-top: 60px;
+  margin: 8px 0 2px;
+  font-weight: 520;
+  font-size: 18px;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details span {
+  color: #0f73ee;
+  display: inline;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details h3 {
+  font-weight: 300;
+  font-size: 12px;
+  color: #9b9292;
+  margin: 0px;
+  padding: 0;
+  display: inline;
+}
+
+.booking_containar .booking_block .car_data .cars .car_details button {
+  margin-top: 10px;
+  border-radius: 1px;
+  border: none;
+  color: #1f1f1f;
+  border: 1px solid #0f73ee;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+#view-button {
+  display: none;
+}
+#close-button {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .booking_containar .booking_block .car_data .cars {
+    border-radius: 4px;
+    border: 1px solid #0f73ee;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 350px;
+  }
+  .booking_containar .booking_block .car_data .cars .car_details {
+    margin-left: auto;
+    margin-right: 20%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: right;
+  }
+
+  #view-button {
+    font-size: 22px;
+    color: #ffffff;
+    display: flex;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    position: fixed;
+    margin-top: 10px;
+    background-color: #0f73ee;
+    margin-right: 4px;
+  }
+
+  #price {
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    position: fixed;
+    margin-top: 98%;
+    background-color: #0f73ee;
+    margin-right: 4px;
+  }
+
+  #close-button {
+    font-size: 25px;
+    font-weight: 600;
+    color: #0f73ee;
+    display: flex;
+    margin-top: 5px;
+    background-color: #f5f5f5;
+    margin-left: 90%;
+    margin-bottom: 5px;
+  }
+
+  .side_containar {
+    display: none;
+    position: fixed;
+    width: 90%;
+    height: 300px;
+    overflow: scroll;
+    background-color: #f5f5f5;
+    float: left;
+  }
+
+  .side_containar .responsiveBooking {
+    display: none;
+  }
+
+  .booking_containar {
+    margin-top: auto;
+    width: 90%;
+    height: 100%;
+    display: block;
+    float: left;
+    background-color: rgb(223, 221, 221);
+  }
+
+  .top_block a {
+    color: #0f73ee;
+    display: block;
+    margin-right: auto;
+    margin-left: 45%;
+    font-size: 15px;
+  }
+
+  .top_block .date input {
     background: #f5f5f5;
     padding: 4px;
     justify-content: space-around;
@@ -144,88 +413,27 @@
     flex-wrap: wrap;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
-    width: 30%;
-}
+    width: 80%;
+  }
 
-.top_block h4 {
-    color: cadetblue;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 35px;
-}
-
-.top_block h5 {
-    color: rgb(226, 76, 76);
-    margin-top: 2px;
-    margin-bottom: 3px;
-}
-
-.top_block .date {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.top_block .date span {
-    color: #0f73ee;
-    display: inline;
-    margin-right: 10px;
-    font-size: 15px;
-}
-
-.top_block a {
-    color: #0f73ee;
-    display: inline;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 15px;
-}
-
-.top_block .location {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.top_block .location span {
-    color: #0f73ee;
-    display: inline;
-    margin-right: 10px;
-    font-size: 15px;
-}
-
-.top_block .location input {
+  .top_block .location input {
     background: #f5f5f5;
     padding: 4px;
     justify-content: space-around;
     margin-bottom: 10px;
-    text-transform: uppercase;
     align-items: center;
     flex-wrap: wrap;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
-    width: 30%;
-}
+    width: 80%;
+    text-transform: uppercase;
+  }
 
-.top_block {
-    background-color: white;
-    padding: 20px;
-}
-
-.booking_containar {
-    width: 70%;
-    height: 100%;
-    float: right;
-    background-color: rgb(223, 221, 221);
-}
-
-.booking_containar .booking_block {
+  .booking_containar .booking_block {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 85%;
     height: auto;
     background-color: white;
     padding: 22px 20px;
@@ -233,226 +441,14 @@
     border: 1px solid #e0e0e0;
     box-shadow: 0px 0px 1px 1px #e0e0e0;
     font-size: 12px;
-}
+  }
 
-.booking_containar .booking_block .car_data .cars {
-    border-radius: 4px;
-    border: 1px solid #0f73ee;
-    padding: 10px;
-    margin-bottom: 10px;
-    height: 220px;
-    justify-content: center;
-
-}
-
-.booking_containar .booking_block .car_data .cars img {
-    width: 274px;
-    height: 154px;
-    margin-top: 30px;
-    margin-bottom: auto;
+  .booking_containar .booking_block .car_data .cars img {
+    width: 254px;
+    height: 144px;
+    margin-right: auto;
     float: left;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details {
-    margin-left: auto;
-    margin-right: 10%;
-    padding: 10px;
     margin-top: auto;
     margin-bottom: auto;
-    float: right;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details h2 {
-    color: #1f1f1f;
-    padding: 0;
-    margin: 8px 0 2px;
-    font-weight: 520;
-    font-size: 15px;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details .carnotfound h2 {
-    color: #0f73ee;
-    padding-top: 60px;
-    margin: 8px 0 2px;
-    font-weight: 520;
-    font-size: 18px;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details span {
-    color: #0f73ee;
-    display: inline;
-    margin-right: 5px;
-    font-size: 15px;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details h3 {
-    font-weight: 300;
-    font-size: 12px;
-    color: #9b9292;
-    margin: 0px;
-    padding: 0;
-    display: inline;
-}
-
-.booking_containar .booking_block .car_data .cars .car_details button {
-    margin-top: 10px;
-    border-radius: 1px;
-    border: none;
-    color: #1f1f1f;
-    border: 1px solid #0f73ee;
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-
-#view-button {
-    display: none;
-}
-#close-button {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .booking_containar .booking_block .car_data .cars {
-        border-radius: 4px;
-        border: 1px solid #0f73ee;
-        padding: 10px;
-        margin-bottom: 10px;
-        height: 350px;
-    }
-    .booking_containar .booking_block .car_data .cars .car_details {
-        margin-left: auto;
-        margin-right: 20%;
-        padding: 10px;
-        margin-top: auto;
-        margin-bottom: auto;
-        float: right;
-    }
-
-    #view-button {
-        font-size: 22px;
-        color: #ffffff;
-        display: flex;
-        padding-left: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 20px;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
-        position: fixed;
-        margin-top: 10px;
-        background-color: #0f73ee;
-        margin-right: 4px;
-    }
-
-
-    #price {
-        font-size: 12px;
-        color: #ffffff;
-        display: flex;
-        padding-left: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 20px;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
-        position: fixed;
-        margin-top: 98%;
-        background-color: #0f73ee;
-        margin-right: 4px;
-    }
-
-    #close-button {
-        font-size: 25px;
-        font-weight: 600;
-        color: #0f73ee;
-        display: flex;
-        margin-top: 5px;
-        background-color: #f5f5f5;
-        margin-left: 90%;
-        margin-bottom: 5px;
-    }
-
-    .side_containar {
-        display: none;
-        position: fixed;
-        width: 90%;
-        height: 300px;
-        overflow: scroll;
-        background-color: #f5f5f5;
-        float: left;
-    }
-
-    .side_containar .responsiveBooking {
-        display: none;
-    }
-
-    .booking_containar {
-        margin-top: auto;
-        width: 90%;
-        height: 100%;
-        display: block;
-        float: left;
-        background-color: rgb(223, 221, 221);
-    }
-
-    .top_block a {
-        color: #0f73ee;
-        display: block;
-        margin-right: auto;
-        margin-left: 45%;
-        font-size: 15px;
-    }
-
-    .top_block .date input {
-        background: #f5f5f5;
-        padding: 4px;
-        justify-content: space-around;
-        margin-bottom: 10px;
-        font-family: Arial, sans-serif;
-        align-items: center;
-        flex-wrap: wrap;
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
-        width: 80%;
-    }
-
-    .top_block .location input {
-        background: #f5f5f5;
-        padding: 4px;
-        justify-content: space-around;
-        margin-bottom: 10px;
-        align-items: center;
-        flex-wrap: wrap;
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
-        width: 80%;
-        text-transform: uppercase;
-    }
-
-
-    .booking_containar .booking_block {
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        height: auto;
-        background-color: white;
-        padding: 22px 20px;
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
-        box-shadow: 0px 0px 1px 1px #e0e0e0;
-        font-size: 12px;
-    }
-
-    .booking_containar .booking_block .car_data .cars img {
-        width: 254px;
-        height: 144px;
-        margin-right: auto;
-        float: left;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+  }
 }
